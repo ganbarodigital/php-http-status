@@ -29,6 +29,7 @@ HTTP Status Code | Value Object's Class
 203 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\NonAuthoritativeInformationStatus`
 204 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\NoContentStatus`
 205 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\ResetContentStatus`
+206 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\PartialContentStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus` interface.
 
