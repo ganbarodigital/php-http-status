@@ -82,3 +82,4 @@
   * Added `NotModifiedStatusProvider`
   * Added `PermanentRedirectStatusProvider`
   * Added `SeeOtherStatusProvider`
+  * Added `TemporaryRedirectStatusProvider`
