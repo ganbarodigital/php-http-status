@@ -34,27 +34,29 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/Specifications
+ * @package   HttpStatus/StatusProviders
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatus\Specifications;
+namespace GanbaroDigital\HttpStatus\StatusProviders\Informational;
 
-use GanbaroDigital\HttpStatus\Values\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
 
 /**
- * HttpStatusBuilder is implemented by class that can create new HttpStatus
- * value objects.
+ * implements the HttpStatusProvider interface
  */
-interface HttpStatusBuilder
+trait ContinueStatusProvider
 {
     /**
-     * returns a new HttpStatus object
+     * returns the HTTP status code that best represents this object
      *
      * @return HttpStatus
      */
-    public static function value();
+    public function getHttpStatus()
+    {
+        return new ContinueStatus;
+    }
 }

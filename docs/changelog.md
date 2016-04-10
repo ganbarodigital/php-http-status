@@ -71,3 +71,6 @@
   * Added `Specifications\RedirectionStatus` for HTTP 3xx codes
   * Added `Specifications\RequestErrorStatus` for HTTP 4xx codes
   * Added `Specifications\RuntimeErrorStatus` for HTTP 5xx codes
+* Added traits to provide HTTP status codes in value objects et al
+  * Added `Specifications\HttpStatusProvider` for your value objects to implement 
+  * Added `ContinueStatusProvider`
