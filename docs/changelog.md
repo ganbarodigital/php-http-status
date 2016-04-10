@@ -133,3 +133,4 @@
   * Added `NonAuthoritativeInformationStatusProvider`
   * Added `OkStatusProvider`
   * Added `PartialContentStatusProvider`
+  * Added `ResetContentStatusProvider`
