@@ -103,3 +103,4 @@
   * Added `PreconditionRequiredStatusProvider`
   * Added `ProxyAuthenticationRequiredStatusProvider`
   * Added `RangeNotSatisfiableStatusProvider`
+  * Added `RequestHeaderFieldsTooLargeStatusProvider`
