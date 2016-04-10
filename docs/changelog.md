@@ -117,3 +117,4 @@
   * Added `HttpVersionNotSupportedStatusProvider`
   * Added `InsufficientStorageStatusProvider`
   * Added `InternalServerErrorStatusProvider`
+  * Added `LoopDetectedStatusProvider`
