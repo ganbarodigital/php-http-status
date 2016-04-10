@@ -106,3 +106,4 @@
   * Added `RequestHeaderFieldsTooLargeStatusProvider`
   * Added `RequestTimeoutStatusProvider`
   * Added `TooManyRequestsStatusProvider`
+  * Added `UnauthorizedStatusProvider`
