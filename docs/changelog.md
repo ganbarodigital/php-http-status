@@ -97,3 +97,4 @@
   * Added `MisdirectedRequestStatusProvider`
   * Added `NotAcceptableStatusProvider`
   * Added `NotFoundStatusProvider`
+  * Added `PayloadTooLargeStatusProvider`
