@@ -114,3 +114,5 @@
   * Added `UriTooLongStatusProvider`
   * Added `BadGatewayStatusProvider`
   * Added `GatewayTimeoutStatusProvider`
+  * Added `HttpVersionNotSupportedStatusProvider`
+  * Added `InsufficientStorageStatusProvider`
