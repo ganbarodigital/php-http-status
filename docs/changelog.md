@@ -6,6 +6,7 @@
   * Added `HttpStatus`
   * Added `ContinueStatus` to represent HTTP 100
   * Added `SwitchingProtocolsStatus` to represent HTTP 101
+  * Added `ProcessingStatus` to represent HTTP 102
   * Added `OkStatus` to represent HTTP 200
   * Added `CreatedStatus` to represent HTTP 201
   * Added `AcceptedStatus` to represent HTTP 202
