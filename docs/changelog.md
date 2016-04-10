@@ -116,3 +116,4 @@
   * Added `GatewayTimeoutStatusProvider`
   * Added `HttpVersionNotSupportedStatusProvider`
   * Added `InsufficientStorageStatusProvider`
+  * Added `InternalServerErrorStatusProvider`
