@@ -54,6 +54,7 @@
   * Added `BadGatewayStatus` to represent HTTP 502
   * Added `ServiceUnavailableStatus` to represent HTTP 503
   * Added `GatewayTimeoutStatus` to represent HTTP 504
+  * Added `HttpVersionNotSupportedStatus` to represent HTTP 505
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
