@@ -40,6 +40,7 @@ These classes represent the HTTP 3xx status codes:
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
 300 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\MultipleChoicesStatus`
+300 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\MovedPermanentlyStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RedirectionStatus` interface.
 
