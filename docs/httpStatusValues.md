@@ -61,6 +61,7 @@ HTTP Status Code | Value Object's Class
 403 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ForbiddenStatus`
 404 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\NotFoundStatus`
 405 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\MethodNotAllowedStatus`
+406 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\NotAcceptableStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus` interface.
 
