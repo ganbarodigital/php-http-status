@@ -56,6 +56,7 @@ These classes represent the HTTP 4xx status codes:
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
 400 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\BadRequestStatus`
+401 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\UnauthorizedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus` interface.
 
