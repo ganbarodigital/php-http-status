@@ -85,3 +85,4 @@
   * Added `TemporaryRedirectStatusProvider`
   * Added `UseProxyStatusProvider`
   * Added `BadRequestStatusProvider`
+  * Added `ConflictStatusProvider`
