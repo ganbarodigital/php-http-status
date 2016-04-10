@@ -18,6 +18,7 @@
   * Added `FoundStatus` to represent HTTP 302
   * Added `SeeOtherStatus` to represent HTTP 303
   * Added `NotModifiedStatus` to represent HTTP 304
+  * Added `UseProxyStatus` to represent HTTP 305
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
