@@ -81,6 +81,7 @@ HTTP Status Code | Value Object's Class
 426 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UpgradeRequiredStatus`
 428 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PreconditionRequiredStatus`
 429 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\TooManyRequestsStatus`
+431 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestHeaderFieldsTooLargeStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
