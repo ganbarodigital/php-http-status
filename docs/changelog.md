@@ -109,3 +109,4 @@
   * Added `UnauthorizedStatusProvider`
   * Added `UnavailableForLegalReasonsStatusProvider`
   * Added `UnprocessableEntityStatusProvider`
+  * Added `UnsupportedMediaTypeStatusProvider`
