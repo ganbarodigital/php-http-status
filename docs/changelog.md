@@ -128,3 +128,4 @@
   * Added `AlreadyReportedStatusProvider`
   * Added `CreatedStatusProvider`
   * Added `IMUsedStatusProvider`
+  * Added `MultiStatusStatusProvider`
