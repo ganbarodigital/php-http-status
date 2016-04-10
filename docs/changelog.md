@@ -122,3 +122,4 @@
   * Added `NotExtendedStatusProvider`
   * Added `NotImplementedStatusProvider`
   * Added `ServiceUnavailableStatusProvider`
+  * Added `UnexpectedErrorStatusProvider`
