@@ -14,6 +14,7 @@
   * Added `NoContentStatus` to represent HTTP 204
   * Added `ResetContentStatus` to represent HTTP 205
   * Added `PartialContentStatus` to represent HTTP 206
+  * Added `MultiStatusStatus` to represent HTTP 207
   * Added `MultipleChoicesStatus` to represent HTTP 300
   * Added `MovedPermanentlyStatus` to represent HTTP 301
   * Added `FoundStatus` to represent HTTP 302
