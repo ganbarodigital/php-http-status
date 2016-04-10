@@ -99,3 +99,4 @@
   * Added `NotFoundStatusProvider`
   * Added `PayloadTooLargeStatusProvider`
   * Added `PaymentRequiredStatusProvider`
+  * Added `PreconditionFailedStatusProvider`
