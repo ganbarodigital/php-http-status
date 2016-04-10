@@ -40,6 +40,7 @@
   * Added `ExpectationFailedStatus` to represent HTTP 417
   * Added `ImATeapotStatus` to represent HTTP 418
   * Added `MisdirectedRequestStatus` to represent HTTP 421
+  * Added `UnprocessableEntityStatus` to represent HTTP 422
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
