@@ -70,6 +70,7 @@ HTTP Status Code | Value Object's Class
 412 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PreconditionFailedStatus`
 413 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PayloadTooLargeStatus`
 414 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UriTooLongStatus`
+415 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnsupportedMediaTypeStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 

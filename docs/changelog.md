@@ -35,6 +35,7 @@
   * Added `PreconditionFailedStatus` to represent HTTP 412
   * Added `PayloadTooLargeStatus` to represent HTTP 413
   * Added `UriTooLongStatus` to represent HTTP 414
+  * Added `UnsupportedMediaTypeStatus` to represent HTTP 415
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
