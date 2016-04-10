@@ -20,6 +20,7 @@
   * Added `NotModifiedStatus` to represent HTTP 304
   * Added `UseProxyStatus` to represent HTTP 305
   * Added `TemporaryRedirectStatus` to represent HTTP 307
+  * Added `BadRequestStatus` to represent HTTP 400
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
