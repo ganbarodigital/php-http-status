@@ -14,7 +14,7 @@ HTTP Status Code | Value Object's Class
 -----------------|--------------------
 100 | `GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus`
 101 | `GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus`
-102 | `GanbaroDigital\HttpStatus\StatusValues\Informational\Processing`
+102 | `GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\InformationalStatus` interface.
 
