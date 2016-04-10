@@ -95,3 +95,4 @@
   * Added `LockedStatusProvider`
   * Added `MethodNotAllowedStatusProvider`
   * Added `MisdirectedRequestStatusProvider`
+  * Added `NotAcceptableStatusProvider`
