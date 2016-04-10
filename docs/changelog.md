@@ -129,3 +129,4 @@
   * Added `CreatedStatusProvider`
   * Added `IMUsedStatusProvider`
   * Added `MultiStatusStatusProvider`
+  * Added `NoContentStatusProvider`
