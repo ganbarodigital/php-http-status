@@ -13,12 +13,7 @@ You can use the _HTTP Status Aware Library_ in two ways:
 
 ## Using The Predefined Value Objects
 
-There's a predefined value object for each supported HTTP status code.
-
-HTTP Status Code | Value Object's Class
------------------|--------------------
-100 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus`
-101 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\SwitchingProtocolsStatus`
+There's a predefined value object for each supported HTTP status code. The full list of objects is here: [HTTP Status Value Classes](httpStatusValues.md).
 
 You can create new instances of each HTTP status value object, and then use these however you want:
 
