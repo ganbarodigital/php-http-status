@@ -78,3 +78,4 @@
   * Added `SwitchingProtocolsStatusProvider`
   * Added `FoundStatusProvider`
   * Added `MovedPermanentlyStatusProvider`
+  * Added `MultipleChoicesStatusProvider`
