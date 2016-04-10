@@ -67,6 +67,7 @@ HTTP Status Code | Value Object's Class
 409 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ConflictStatus`
 410 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\GoneStatus`
 411 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LengthRequiredStatus`
+412 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PreconditionFailedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 

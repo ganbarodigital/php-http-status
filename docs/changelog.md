@@ -32,6 +32,7 @@
   * Added `ConflictStatus` to represent HTTP 409
   * Added `GoneStatus` to represent HTTP 410
   * Added `LengthRequiredStatus` to represent HTTP 411
+  * Added `PreconditionFailedStatus` to represent HTTP 412
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
