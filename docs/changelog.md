@@ -11,6 +11,7 @@
   * Added `AcceptedStatus` to represent HTTP 202
   * Added `NonAuthoritativeInformationStatus` to represent HTTP 203
   * Added `NoContentStatus` to represent HTTP 204
+  * Added `ResetContentStatus` to represent HTTP 205
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
