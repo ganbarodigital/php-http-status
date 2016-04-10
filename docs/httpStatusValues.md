@@ -58,6 +58,7 @@ HTTP Status Code | Value Object's Class
 400 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\BadRequestStatus`
 401 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\UnauthorizedStatus`
 402 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\PaymentRequiredStatus`
+403 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ForbiddenStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus` interface.
 
