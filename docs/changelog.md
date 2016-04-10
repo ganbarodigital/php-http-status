@@ -92,3 +92,4 @@
   * Added `GoneStatusProvider`
   * Added `ImATeapotStatusProvider`
   * Added `LengthRequiredStatusProvider`
+  * Added `LockedStatusProvider`
