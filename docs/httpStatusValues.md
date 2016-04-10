@@ -45,6 +45,7 @@ HTTP Status Code | Value Object's Class
 303 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\SeeOtherStatus`
 304 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\NotModifiedStatus`
 305 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\UseProxyStatus`
+307 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\TemporaryRedirectStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RedirectionStatus` interface.
 
