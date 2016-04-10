@@ -93,3 +93,4 @@
   * Added `ImATeapotStatusProvider`
   * Added `LengthRequiredStatusProvider`
   * Added `LockedStatusProvider`
+  * Added `MethodNotAllowedStatusProvider`
