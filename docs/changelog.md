@@ -22,6 +22,7 @@
   * Added `TemporaryRedirectStatus` to represent HTTP 307
   * Added `BadRequestStatus` to represent HTTP 400
   * Added `UnauthorizedStatus` to represent HTTP 401
+  * Added `PaymentRequiredStatus` to represent HTTP 402
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
