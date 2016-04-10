@@ -101,3 +101,4 @@
   * Added `PaymentRequiredStatusProvider`
   * Added `PreconditionFailedStatusProvider`
   * Added `PreconditionRequiredStatusProvider`
+  * Added `ProxyAuthenticationRequiredStatusProvider`
