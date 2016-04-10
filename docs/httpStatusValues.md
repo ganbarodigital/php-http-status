@@ -73,6 +73,7 @@ HTTP Status Code | Value Object's Class
 415 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnsupportedMediaTypeStatus`
 416 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RangeNotSatisfiableStatus`
 417 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ExpectationFailedStatus`
+418 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ImATeapotStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
