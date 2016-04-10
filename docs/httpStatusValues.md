@@ -95,5 +95,6 @@ HTTP Status Code | Value Object's Class
 500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InternalServerErrorStatus`
 500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\UnexpectedErrorStatus`
 501 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotImplementedStatus`
+502 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\BadGatewayStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.
