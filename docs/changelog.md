@@ -88,3 +88,4 @@
   * Added `ConflictStatusProvider`
   * Added `ExpectationFailedStatusProvider`
   * Added `FailedDependencyStatusProvider`
+  * Added `ForbiddenStatusProvider`
