@@ -120,3 +120,4 @@
   * Added `LoopDetectedStatusProvider`
   * Added `NetworkAuthenticationRequiredStatusProvider`
   * Added `NotExtendedStatusProvider`
+  * Added `NotImplementedStatusProvider`
