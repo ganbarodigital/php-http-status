@@ -96,3 +96,4 @@
   * Added `MethodNotAllowedStatusProvider`
   * Added `MisdirectedRequestStatusProvider`
   * Added `NotAcceptableStatusProvider`
+  * Added `NotFoundStatusProvider`
