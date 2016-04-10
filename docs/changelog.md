@@ -98,3 +98,4 @@
   * Added `NotAcceptableStatusProvider`
   * Added `NotFoundStatusProvider`
   * Added `PayloadTooLargeStatusProvider`
+  * Added `PaymentRequiredStatusProvider`
