@@ -83,3 +83,4 @@
   * Added `PermanentRedirectStatusProvider`
   * Added `SeeOtherStatusProvider`
   * Added `TemporaryRedirectStatusProvider`
+  * Added `UseProxyStatusProvider`
