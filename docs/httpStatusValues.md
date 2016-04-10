@@ -100,5 +100,6 @@ HTTP Status Code | Value Object's Class
 504 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus`
 505 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\HttpVersionNotSupportedStatus`
 506 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\VariantAlsoNegotiatesStatus`
+507 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InsufficientStorageStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.
