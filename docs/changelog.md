@@ -90,3 +90,4 @@
   * Added `FailedDependencyStatusProvider`
   * Added `ForbiddenStatusProvider`
   * Added `GoneStatusProvider`
+  * Added `ImATeapotStatusProvider`
