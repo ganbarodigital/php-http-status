@@ -94,3 +94,4 @@
   * Added `LengthRequiredStatusProvider`
   * Added `LockedStatusProvider`
   * Added `MethodNotAllowedStatusProvider`
+  * Added `MisdirectedRequestStatusProvider`
