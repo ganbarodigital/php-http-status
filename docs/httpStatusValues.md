@@ -76,6 +76,7 @@ HTTP Status Code | Value Object's Class
 418 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ImATeapotStatus`
 421 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\MisdirectedRequestStatus`
 422 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnprocessableEntityStatus`
+423 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LockedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
