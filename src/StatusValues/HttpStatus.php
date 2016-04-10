@@ -34,14 +34,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/Values
+ * @package   HttpStatusAware/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status-aware
  */
 
-namespace GanbaroDigital\HttpStatusAware\Values;
+namespace GanbaroDigital\HttpStatusAware\StatusValues;
 
 /**
  * This is the value object returned by our various HTTP status traits.

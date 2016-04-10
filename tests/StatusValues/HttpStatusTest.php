@@ -34,20 +34,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/Values
+ * @package   HttpStatusAware/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status-aware
  */
 
-namespace GanbaroDigital\TestHttpStatusAware\Values;
+namespace GanbaroDigital\TestHttpStatusAware\StatusValues;
 
-use GanbaroDigital\HttpStatusAware\Values\HttpStatus;
+use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass GanbaroDigital\HttpStatusAware\Values\HttpStatus
+ * @coversDefaultClass GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus
  */
 class HttpStatusTest extends PHPUnit_Framework_TestCase
 {

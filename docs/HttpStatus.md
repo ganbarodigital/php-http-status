@@ -4,7 +4,9 @@ currentMenu: httpstatus
 
 # The HttpStatus Value Object
 
-The `StatusBuilders` return a `HttpStatus` value object:
+The `HttpStatus` value object represents a single HTTP status:
+
+    namespace GanbaroDigital\HttpStatusAware\StatusValues;
 
     class HttpStatus
     {
@@ -16,9 +18,18 @@ The `StatusBuilders` return a `HttpStatus` value object:
 
 ## Construction
 
+The constructor for `HttpStatus` takes two parameters:
+
+* `$statusCode` (int) - the HTTP status code (e.g. 404)
+* `$reasonPhrase` (string) - a description of the HTTP status (e.g. "Not Found")
+
+You can find a full list of HTTP status codes, and their normal descriptions, in [section 6.1 of RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.1).
+
 ## getStatusCode()
 
 `HttpStatus::getStatusCode()` returns the HTTP status code as an integer:
+
+    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
 
     $status = new HttpStatus(404, "Not Found");
     $statusCode = $status->getStatusCode();
@@ -31,6 +42,8 @@ HTTP status codes are part of the HTTP standards. Servers, proxies and clients u
 
 `HttpStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
+    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+
     $status = new HttpStatus(404, "Not Found");
     $reasonPhrase = $status->getReasonPhrase();
 
@@ -41,6 +54,8 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 ## getStatusLine()
 
 `HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+
+    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
 
     $status = new HttpStatus(404, "Not Found");
     $statusLine = $status->getStatusLine();
