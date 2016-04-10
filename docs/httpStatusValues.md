@@ -65,6 +65,7 @@ HTTP Status Code | Value Object's Class
 407 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ProxyAuthenticationRequiredStatus`
 408 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestTimeoutStatus`
 409 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ConflictStatus`
+410 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\GoneStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
