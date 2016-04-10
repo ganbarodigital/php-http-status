@@ -68,6 +68,7 @@ HTTP Status Code | Value Object's Class
 410 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\GoneStatus`
 411 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LengthRequiredStatus`
 412 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PreconditionFailedStatus`
+413 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PayloadTooLargeStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
