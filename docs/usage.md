@@ -9,17 +9,17 @@
 You can use the _HTTP Status Aware Library_ in two ways:
 
 * simply instantiate new value objects for known HTTP status codes, and/or
-* use the traits in the `Informational`, `Successful`, `Redirection`, `RequestError`, or `RuntimeError` namespaces to add a `getHttpStatus()` method to your own value objects, entities and exceptions
+* use the traits in the `StatusProviders` namespace to add a `getHttpStatus()` method to your own value objects, entities and exceptions
 
 ## Using The Predefined Value Objects
 
-There's a predefined value object for each supported HTTP status code. The full list of objects is here: [HTTP Status Value Classes](httpStatusValues.md).
+There's a predefined value object for each supported HTTP status code. The full list of objects is here: [HTTP Status Value Classes](httpStatusValues.html).
 
 You can create new instances of each HTTP status value object, and then use these however you want:
 
     // import the class(es) you need
-    use GanbaroDigital\\HttpStatus\\StatusValues\\Informational\\ContinueStatus;
-    use GanbaroDigital\\HttpStatus\\Specifications\\InformationalStatus;
+    use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+    use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
 
     // create the value object
     $httpStatus = new ContinueStatus;
@@ -42,22 +42,17 @@ HTTP Status Code | Interface To Test For
 
 ## Using The Traits
 
-There's a trait for each supported HTTP status code.
-
-HTTP Status Code | Trait
------------------|------
-100 | `GanbaroDigital\HttpStatus\Informational\ContinueStatus`
-101 | `GanbaroDigital\HttpStatus\Informational\SwitchingProtocolsStatus`
+There's a trait for each supported HTTP status code. The full list of traits is here: [HTTP Status Provider Traits](httpStatusProviders.md).
 
 Each trait is used exactly the same way:
 
     // import the trait and associated interface
-    use GanbaroDigital\\HttpStatus\\Informational\\ContinueStatus;
-    use GanbaroDigital\\HttpStatus\\Specifications\\HttpStatus;
+    use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
+    use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
 
-    class MyValueObject implements HttpStatus
+    class MyValueObject implements HttpStatusProvider
     {
-        use ContinueStatus;
+        use ContinueStatusProvider;
     }
 
 Each trait adds a public method `getHttpStatus()` to your class:
@@ -70,5 +65,3 @@ Each trait adds a public method `getHttpStatus()` to your class:
     public function getHttpStatus();
 
 The trait that you pick decides which HTTP status that `getHttpStatus()` will return.
-
-Internally, each trait uses the associated `StatusBuilder` to build the `HttpStatus` object that it returns.
