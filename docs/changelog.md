@@ -118,3 +118,4 @@
   * Added `InsufficientStorageStatusProvider`
   * Added `InternalServerErrorStatusProvider`
   * Added `LoopDetectedStatusProvider`
+  * Added `NetworkAuthenticationRequiredStatusProvider`
