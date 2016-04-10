@@ -111,3 +111,4 @@
   * Added `UnprocessableEntityStatusProvider`
   * Added `UnsupportedMediaTypeStatusProvider`
   * Added `UpgradeRequiredStatusProvider`
+  * Added `UriTooLongStatusProvider`
