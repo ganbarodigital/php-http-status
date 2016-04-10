@@ -126,3 +126,4 @@
   * Added `VariantAlsoNegotiatesStatusProvider`
   * Added `AcceptedStatusProvider`
   * Added `AlreadyReportedStatusProvider`
+  * Added `CreatedStatusProvider`
