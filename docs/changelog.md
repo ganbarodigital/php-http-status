@@ -100,3 +100,4 @@
   * Added `PayloadTooLargeStatusProvider`
   * Added `PaymentRequiredStatusProvider`
   * Added `PreconditionFailedStatusProvider`
+  * Added `PreconditionRequiredStatusProvider`
