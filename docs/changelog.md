@@ -75,3 +75,4 @@
   * Added `Specifications\HttpStatusProvider` for your value objects to implement
   * Added `ContinueStatusProvider`
   * Added `ProcessingStatusProvider`
+  * Added `SwitchingProtocolsStatusProvider`
