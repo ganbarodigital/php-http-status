@@ -92,7 +92,8 @@ These classes represent the HTTP 5xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InternalServerError`
-500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\UnexpectedError`
+500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InternalServerErrorStatus`
+500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\UnexpectedErrorStatus`
+501 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotImplementedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.
