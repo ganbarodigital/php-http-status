@@ -43,6 +43,7 @@
   * Added `UnprocessableEntityStatus` to represent HTTP 422
   * Added `LockedStatus` to represent HTTP 423
   * Added `FailedDependencyStatus` to represent HTTP 424
+  * Added `UpgradeRequiredStatus` to represent HTTP 426
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes

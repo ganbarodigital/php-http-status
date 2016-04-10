@@ -78,6 +78,7 @@ HTTP Status Code | Value Object's Class
 422 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnprocessableEntityStatus`
 423 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LockedStatus`
 424 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\FailedDependencyStatus`
+426 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UpgradeRequiredStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
