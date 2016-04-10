@@ -66,6 +66,7 @@ HTTP Status Code | Value Object's Class
 408 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestTimeoutStatus`
 409 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ConflictStatus`
 410 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\GoneStatus`
+411 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LengthRequiredStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
