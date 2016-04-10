@@ -34,23 +34,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/StatusValues
+ * @package   HttpStatus/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigitalTest\HttpStatusAware\StatusValues\Redirection;
+namespace GanbaroDigitalTest\HttpStatus\StatusValues\Redirection;
 
-use GanbaroDigital\HttpStatusAware\Specifications\RedirectionStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\Redirection\TemporaryRedirectStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Specifications\RedirectionStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass GanbaroDigital\HttpStatusAware\StatusValues\Redirection\TemporaryRedirectStatus
+ * @coversDefaultClass GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus
  */
 class TemporaryRedirectStatusTest extends PHPUnit_Framework_TestCase
 {

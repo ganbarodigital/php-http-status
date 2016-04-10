@@ -12,10 +12,10 @@ These classes represent the HTTP 1xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-100 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus`
-101 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\SwitchingProtocolsStatus`
+100 | `GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus`
+101 | `GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\InformationalStatus` interface.
 
 ## Successful Status Codes
 
@@ -23,15 +23,15 @@ These classes represent the HTTP 2xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-200 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\OkStatus`
-201 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\CreatedStatus`
-202 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\AcceptedStatus`
-203 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\NonAuthoritativeInformationStatus`
-204 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\NoContentStatus`
-205 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\ResetContentStatus`
-206 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\PartialContentStatus`
+200 | `GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus`
+201 | `GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus`
+202 | `GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus`
+203 | `GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus`
+204 | `GanbaroDigital\HttpStatus\StatusValues\Successful\NoContentStatus`
+205 | `GanbaroDigital\HttpStatus\StatusValues\Successful\ResetContentStatus`
+206 | `GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus` interface.
 
 ## Redirection Status Codes
 
@@ -39,15 +39,15 @@ These classes represent the HTTP 3xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-300 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\MultipleChoicesStatus`
-301 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\MovedPermanentlyStatus`
-302 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\FoundStatus`
-303 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\SeeOtherStatus`
-304 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\NotModifiedStatus`
-305 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\UseProxyStatus`
-307 | `GanbaroDigital\HttpStatusAware\StatusValues\Redirection\TemporaryRedirectStatus`
+300 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus`
+301 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus`
+302 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\FoundStatus`
+303 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\SeeOtherStatus`
+304 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\NotModifiedStatus`
+305 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\UseProxyStatus`
+307 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RedirectionStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RedirectionStatus` interface.
 
 ## RequestError Status Codes
 
@@ -55,18 +55,18 @@ These classes represent the HTTP 4xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-400 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\BadRequestStatus`
-401 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\UnauthorizedStatus`
-402 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\PaymentRequiredStatus`
-403 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ForbiddenStatus`
-404 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\NotFoundStatus`
-405 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\MethodNotAllowedStatus`
-406 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\NotAcceptableStatus`
-407 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ProxyAuthenticationRequiredStatus`
-408 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\RequestTimeoutStatus`
-409 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ConflictStatus`
+400 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\BadRequestStatus`
+401 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnauthorizedStatus`
+402 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PaymentRequiredStatus`
+403 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ForbiddenStatus`
+404 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\NotFoundStatus`
+405 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\MethodNotAllowedStatus`
+406 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\NotAcceptableStatus`
+407 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ProxyAuthenticationRequiredStatus`
+408 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestTimeoutStatus`
+409 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ConflictStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
 ## RuntimeError Status Codes
 
@@ -74,7 +74,7 @@ These classes represent the HTTP 5xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
-500 | `GanbaroDigital\HttpStatusAware\StatusValues\RuntimeError\InternalServerError`
-500 | `GanbaroDigital\HttpStatusAware\StatusValues\RuntimeError\UnexpectedError`
+500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InternalServerError`
+500 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\UnexpectedError`
 
-Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RuntimeErrorStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.

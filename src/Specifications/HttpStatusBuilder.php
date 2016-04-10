@@ -34,16 +34,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/Specifications
+ * @package   HttpStatus/Specifications
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatusAware\Specifications;
+namespace GanbaroDigital\HttpStatus\Specifications;
 
-use GanbaroDigital\HttpStatusAware\Values\HttpStatus;
+use GanbaroDigital\HttpStatus\Values\HttpStatus;
 
 /**
  * HttpStatusBuilder is implemented by class that can create new HttpStatus

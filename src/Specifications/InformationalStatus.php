@@ -34,14 +34,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/Specifications
+ * @package   HttpStatus/Specifications
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatusAware\Specifications;
+namespace GanbaroDigital\HttpStatus\Specifications;
 
 /**
  * InformationalStatus is implemented by any HttpStatus that has a HTTP

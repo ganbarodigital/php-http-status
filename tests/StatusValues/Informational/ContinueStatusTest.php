@@ -34,23 +34,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/StatusValues
+ * @package   HttpStatus/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigitalTest\HttpStatusAware\StatusValues\Informational;
+namespace GanbaroDigitalTest\HttpStatus\StatusValues\Informational;
 
-use GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus
+ * @coversDefaultClass GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus
  */
 class ContinueStatusTest extends PHPUnit_Framework_TestCase
 {

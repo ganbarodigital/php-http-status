@@ -18,8 +18,8 @@ There's a predefined value object for each supported HTTP status code. The full 
 You can create new instances of each HTTP status value object, and then use these however you want:
 
     // import the class(es) you need
-    use GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus;
-    use GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus;
+    use GanbaroDigital\\HttpStatus\\StatusValues\\Informational\\ContinueStatus;
+    use GanbaroDigital\\HttpStatus\\Specifications\\InformationalStatus;
 
     // create the value object
     $httpStatus = new ContinueStatus;
@@ -34,11 +34,11 @@ Each predefined value object implements one of the following interfaces, so that
 
 HTTP Status Code | Interface To Test For
 -----------------|----------------------
-1xx | `GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus`
-2xx | `GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus`
-3xx | `GanbaroDigital\HttpStatusAware\Specifications\RedirectStatus`
-4xx | `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus`
-5xx | `GanbaroDigital\HttpStatusAware\Specifications\RuntimeErrorStatus`
+1xx | `GanbaroDigital\HttpStatus\Specifications\InformationalStatus`
+2xx | `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus`
+3xx | `GanbaroDigital\HttpStatus\Specifications\RedirectStatus`
+4xx | `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus`
+5xx | `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus`
 
 ## Using The Traits
 
@@ -46,16 +46,16 @@ There's a trait for each supported HTTP status code.
 
 HTTP Status Code | Trait
 -----------------|------
-100 | `GanbaroDigital\HttpStatusAware\Informational\ContinueStatus`
-101 | `GanbaroDigital\HttpStatusAware\Informational\SwitchingProtocolsStatus`
+100 | `GanbaroDigital\HttpStatus\Informational\ContinueStatus`
+101 | `GanbaroDigital\HttpStatus\Informational\SwitchingProtocolsStatus`
 
 Each trait is used exactly the same way:
 
     // import the trait and associated interface
-    use GanbaroDigital\\HttpStatusAware\\Informational\\ContinueStatus;
-    use GanbaroDigital\\HttpStatusAware\\Specifications\\HttpStatusAware;
+    use GanbaroDigital\\HttpStatus\\Informational\\ContinueStatus;
+    use GanbaroDigital\\HttpStatus\\Specifications\\HttpStatus;
 
-    class MyValueObject implements HttpStatusAware
+    class MyValueObject implements HttpStatus
     {
         use ContinueStatus;
     }

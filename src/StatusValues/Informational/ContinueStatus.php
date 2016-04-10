@@ -34,17 +34,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/StatusValues
+ * @package   HttpStatus/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatusAware\StatusValues\Informational;
+namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
 
-use GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 /**
  * ContinueStatus is a HttpStatus value object that represents

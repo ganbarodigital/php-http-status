@@ -34,23 +34,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatusAware/StatusValues
+ * @package   HttpStatus/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link      http://ganbarodigital.github.io/php-http-status-aware
+ * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigitalTest\HttpStatusAware\StatusValues\Successful;
+namespace GanbaroDigitalTest\HttpStatus\StatusValues\Successful;
 
-use GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\Successful\CreatedStatus;
-use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass GanbaroDigital\HttpStatusAware\StatusValues\Successful\CreatedStatus
+ * @coversDefaultClass GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus
  */
 class CreatedStatusTest extends PHPUnit_Framework_TestCase
 {

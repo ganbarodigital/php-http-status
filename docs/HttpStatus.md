@@ -6,7 +6,7 @@ currentMenu: httpstatus
 
 The `HttpStatus` value object represents a single HTTP status:
 
-    namespace GanbaroDigital\HttpStatusAware\StatusValues;
+    namespace GanbaroDigital\\HttpStatus\\StatusValues;
 
     class HttpStatus
     {
@@ -29,7 +29,7 @@ You can find a full list of HTTP status codes, and their normal descriptions, in
 
 `HttpStatus::getStatusCode()` returns the HTTP status code as an integer:
 
-    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+    use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
 
     $status = new HttpStatus(404, "Not Found");
     $statusCode = $status->getStatusCode();
@@ -42,7 +42,7 @@ HTTP status codes are part of the HTTP standards. Servers, proxies and clients u
 
 `HttpStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
-    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+    use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
 
     $status = new HttpStatus(404, "Not Found");
     $reasonPhrase = $status->getReasonPhrase();
@@ -55,7 +55,7 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 
 `HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
-    use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
+    use GanbaroDigital\\HttpStatus\\StatusValues\\HttpStatus;
 
     $status = new HttpStatus(404, "Not Found");
     $statusLine = $status->getStatusLine();

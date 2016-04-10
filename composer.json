@@ -1,5 +1,5 @@
 {
-    "name": "ganbarodigital/php-http-status-aware",
+    "name": "ganbarodigital/php-http-status",
     "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GanbaroDigital\\HttpStatusAware\\": "src"
+            "GanbaroDigital\\HttpStatus\\": "src"
         }
     }
 }
