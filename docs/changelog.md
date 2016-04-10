@@ -125,3 +125,4 @@
   * Added `UnexpectedErrorStatusProvider`
   * Added `VariantAlsoNegotiatesStatusProvider`
   * Added `AcceptedStatusProvider`
+  * Added `AlreadyReportedStatusProvider`
