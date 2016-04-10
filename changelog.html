@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>PHP HTTP Status Library</title>
+
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/highlight.dark.css">
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/main.css">
+    </head>
+    <body>
+
+        <header class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="http://ganbarodigital.github.io/php-http-status/">
+                PHP HTTP Status Library
+                <small class="hidden-xs hidden-sm">
+                    Easy-to-use library to map your value objects, entities and exceptions onto HTTP status codes
+                </small>
+            </a>
+
+                            <a href="https://github.com/ganbarodigital/php-http-status">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                </a>
+            
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                
+                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+
+                        <ul class="nav nav-pills nav-stacked">
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/index.html">
+                                        Introduction
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/license.html">
+                                        License
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/installation.html">
+                                        Installation
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/usage.html">
+                                        Usage
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/HttpStatus.html">
+                                        HttpStatus
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/httpStatusValues.html">
+                                        HTTP Status Value Classes
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/httpStatusProviders.html">
+                                        HTTP Status Provider Traits
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="http://ganbarodigital.github.io/php-http-status/changelog.html">
+                                        Changelog
+                                    </a>
+                                </li>
+                                                    </ul>
+
+                    </nav>
+
+                
+                <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+                    <h1 id="changelog">CHANGELOG</h1>
+<h2 id="develop-branch">develop branch</h2>
+<p>Nothing yet.</p>
+<h2 id="v100---sun-april-10th-2016">v1.0.0 - Sun April 10th 2016</h2>
+<h3 id="new">New</h3>
+<ul>
+<li>Added a value object to represent each support HTTP status code.
+<ul>
+<li>Added <code>HttpStatus</code></li>
+<li>Added <code>ContinueStatus</code> to represent HTTP 100</li>
+<li>Added <code>SwitchingProtocolsStatus</code> to represent HTTP 101</li>
+<li>Added <code>ProcessingStatus</code> to represent HTTP 102</li>
+<li>Added <code>OkStatus</code> to represent HTTP 200</li>
+<li>Added <code>CreatedStatus</code> to represent HTTP 201</li>
+<li>Added <code>AcceptedStatus</code> to represent HTTP 202</li>
+<li>Added <code>NonAuthoritativeInformationStatus</code> to represent HTTP 203</li>
+<li>Added <code>NoContentStatus</code> to represent HTTP 204</li>
+<li>Added <code>ResetContentStatus</code> to represent HTTP 205</li>
+<li>Added <code>PartialContentStatus</code> to represent HTTP 206</li>
+<li>Added <code>MultiStatusStatus</code> to represent HTTP 207</li>
+<li>Added <code>AlreadyReportedStatus</code> to represent HTTP 208</li>
+<li>Added <code>IMUsedStatus</code> to represent HTTP 226</li>
+<li>Added <code>MultipleChoicesStatus</code> to represent HTTP 300</li>
+<li>Added <code>MovedPermanentlyStatus</code> to represent HTTP 301</li>
+<li>Added <code>FoundStatus</code> to represent HTTP 302</li>
+<li>Added <code>SeeOtherStatus</code> to represent HTTP 303</li>
+<li>Added <code>NotModifiedStatus</code> to represent HTTP 304</li>
+<li>Added <code>UseProxyStatus</code> to represent HTTP 305</li>
+<li>Added <code>TemporaryRedirectStatus</code> to represent HTTP 307</li>
+<li>Added <code>PermanentRedirectStatus</code> to represent HTTP 308</li>
+<li>Added <code>BadRequestStatus</code> to represent HTTP 400</li>
+<li>Added <code>UnauthorizedStatus</code> to represent HTTP 401</li>
+<li>Added <code>PaymentRequiredStatus</code> to represent HTTP 402</li>
+<li>Added <code>ForbiddenStatus</code> to represent HTTP 403</li>
+<li>Added <code>NotFoundStatus</code> to represent HTTP 404</li>
+<li>Added <code>MethodNotAllowed</code> to represent HTTP 405</li>
+<li>Added <code>NotAcceptableStatus</code> to represent HTTP 406</li>
+<li>Added <code>ProxyAuthenticationRequiredStatus</code> to represent HTTP 407</li>
+<li>Added <code>RequestTimeoutStatus</code> to represent HTTP 408</li>
+<li>Added <code>ConflictStatus</code> to represent HTTP 409</li>
+<li>Added <code>GoneStatus</code> to represent HTTP 410</li>
+<li>Added <code>LengthRequiredStatus</code> to represent HTTP 411</li>
+<li>Added <code>PreconditionFailedStatus</code> to represent HTTP 412</li>
+<li>Added <code>PayloadTooLargeStatus</code> to represent HTTP 413</li>
+<li>Added <code>UriTooLongStatus</code> to represent HTTP 414</li>
+<li>Added <code>UnsupportedMediaTypeStatus</code> to represent HTTP 415</li>
+<li>Added <code>RangeNotSatisfiableStatus</code> to represent HTTP 416</li>
+<li>Added <code>ExpectationFailedStatus</code> to represent HTTP 417</li>
+<li>Added <code>ImATeapotStatus</code> to represent HTTP 418</li>
+<li>Added <code>MisdirectedRequestStatus</code> to represent HTTP 421</li>
+<li>Added <code>UnprocessableEntityStatus</code> to represent HTTP 422</li>
+<li>Added <code>LockedStatus</code> to represent HTTP 423</li>
+<li>Added <code>FailedDependencyStatus</code> to represent HTTP 424</li>
+<li>Added <code>UpgradeRequiredStatus</code> to represent HTTP 426</li>
+<li>Added <code>PreconditionRequiredStatus</code> to represent HTTP 428</li>
+<li>Added <code>TooManyRequestsStatus</code> to represent HTTP 429</li>
+<li>Added <code>RequestHeaderFieldsTooLargeStatus</code> to represent HTTP 431</li>
+<li>Added <code>UnavailableForLegalReasonsStatus</code> to represent HTTP 451</li>
+<li>Added <code>InternalServerErrorStatus</code> to represent HTTP 500</li>
+<li>Added <code>UnexpectedError</code> to represent HTTP 500</li>
+<li>Added <code>NotImplemented</code> to represent HTTP 501</li>
+<li>Added <code>BadGatewayStatus</code> to represent HTTP 502</li>
+<li>Added <code>ServiceUnavailableStatus</code> to represent HTTP 503</li>
+<li>Added <code>GatewayTimeoutStatus</code> to represent HTTP 504</li>
+<li>Added <code>HttpVersionNotSupportedStatus</code> to represent HTTP 505</li>
+<li>Added <code>VariantAlsoNegotiatesStatus</code> to represent HTTP 506</li>
+<li>Added <code>InsufficientStorageStatus</code> to represent HTTP 507</li>
+<li>Added <code>LoopDetectedStatus</code> to represent HTTP 508</li>
+<li>Added <code>NotExtendedStatus</code> to represent HTTP 510</li>
+<li>Added <code>NetworkAuthenticationRequiredStatus</code> to represent HTTP 511</li>
+</ul></li>
+<li>Added interfaces to represent each group of HTTP status codes.
+<ul>
+<li>Added <code>Specifications\InformationalStatus</code> for HTTP 1xx codes</li>
+<li>Added <code>Specifications\SuccessfulStatus</code> for HTTP 2xx codes</li>
+<li>Added <code>Specifications\RedirectionStatus</code> for HTTP 3xx codes</li>
+<li>Added <code>Specifications\RequestErrorStatus</code> for HTTP 4xx codes</li>
+<li>Added <code>Specifications\RuntimeErrorStatus</code> for HTTP 5xx codes</li>
+</ul></li>
+<li>Added traits to provide HTTP status codes in value objects et al
+<ul>
+<li>Added <code>Specifications\HttpStatusProvider</code> for your value objects to implement</li>
+<li>Added <code>ContinueStatusProvider</code></li>
+<li>Added <code>ProcessingStatusProvider</code></li>
+<li>Added <code>SwitchingProtocolsStatusProvider</code></li>
+<li>Added <code>FoundStatusProvider</code></li>
+<li>Added <code>MovedPermanentlyStatusProvider</code></li>
+<li>Added <code>MultipleChoicesStatusProvider</code></li>
+<li>Added <code>NotModifiedStatusProvider</code></li>
+<li>Added <code>PermanentRedirectStatusProvider</code></li>
+<li>Added <code>SeeOtherStatusProvider</code></li>
+<li>Added <code>TemporaryRedirectStatusProvider</code></li>
+<li>Added <code>UseProxyStatusProvider</code></li>
+<li>Added <code>BadRequestStatusProvider</code></li>
+<li>Added <code>ConflictStatusProvider</code></li>
+<li>Added <code>ExpectationFailedStatusProvider</code></li>
+<li>Added <code>FailedDependencyStatusProvider</code></li>
+<li>Added <code>ForbiddenStatusProvider</code></li>
+<li>Added <code>GoneStatusProvider</code></li>
+<li>Added <code>ImATeapotStatusProvider</code></li>
+<li>Added <code>LengthRequiredStatusProvider</code></li>
+<li>Added <code>LockedStatusProvider</code></li>
+<li>Added <code>MethodNotAllowedStatusProvider</code></li>
+<li>Added <code>MisdirectedRequestStatusProvider</code></li>
+<li>Added <code>NotAcceptableStatusProvider</code></li>
+<li>Added <code>NotFoundStatusProvider</code></li>
+<li>Added <code>PayloadTooLargeStatusProvider</code></li>
+<li>Added <code>PaymentRequiredStatusProvider</code></li>
+<li>Added <code>PreconditionFailedStatusProvider</code></li>
+<li>Added <code>PreconditionRequiredStatusProvider</code></li>
+<li>Added <code>ProxyAuthenticationRequiredStatusProvider</code></li>
+<li>Added <code>RangeNotSatisfiableStatusProvider</code></li>
+<li>Added <code>RequestHeaderFieldsTooLargeStatusProvider</code></li>
+<li>Added <code>RequestTimeoutStatusProvider</code></li>
+<li>Added <code>TooManyRequestsStatusProvider</code></li>
+<li>Added <code>UnauthorizedStatusProvider</code></li>
+<li>Added <code>UnavailableForLegalReasonsStatusProvider</code></li>
+<li>Added <code>UnprocessableEntityStatusProvider</code></li>
+<li>Added <code>UnsupportedMediaTypeStatusProvider</code></li>
+<li>Added <code>UpgradeRequiredStatusProvider</code></li>
+<li>Added <code>UriTooLongStatusProvider</code></li>
+<li>Added <code>BadGatewayStatusProvider</code></li>
+<li>Added <code>GatewayTimeoutStatusProvider</code></li>
+<li>Added <code>HttpVersionNotSupportedStatusProvider</code></li>
+<li>Added <code>InsufficientStorageStatusProvider</code></li>
+<li>Added <code>InternalServerErrorStatusProvider</code></li>
+<li>Added <code>LoopDetectedStatusProvider</code></li>
+<li>Added <code>NetworkAuthenticationRequiredStatusProvider</code></li>
+<li>Added <code>NotExtendedStatusProvider</code></li>
+<li>Added <code>NotImplementedStatusProvider</code></li>
+<li>Added <code>ServiceUnavailableStatusProvider</code></li>
+<li>Added <code>UnexpectedErrorStatusProvider</code></li>
+<li>Added <code>VariantAlsoNegotiatesStatusProvider</code></li>
+<li>Added <code>AcceptedStatusProvider</code></li>
+<li>Added <code>AlreadyReportedStatusProvider</code></li>
+<li>Added <code>CreatedStatusProvider</code></li>
+<li>Added <code>IMUsedStatusProvider</code></li>
+<li>Added <code>MultiStatusStatusProvider</code></li>
+<li>Added <code>NoContentStatusProvider</code></li>
+<li>Added <code>NonAuthoritativeInformationStatusProvider</code></li>
+<li>Added <code>OkStatusProvider</code></li>
+<li>Added <code>PartialContentStatusProvider</code></li>
+<li>Added <code>ResetContentStatusProvider</code></li>
+</ul></li>
+</ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="container-fluid">
+                <p class="text-muted">
+                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+        <script>
+            $(function() {
+                $("section>h1").wrap('<div class="page-header" />');
+                // Syntax highlighting
+                hljs.initHighlightingOnLoad();
+            });
+        </script>
+
+    </body>
+</html>
