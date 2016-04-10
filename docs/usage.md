@@ -8,27 +8,42 @@
 
 You can use the _HTTP Status Aware Library_ in two ways:
 
-* call the `StatusBuilders` directly to create new `HttpStatus` objects, and/or
+* simply instantiate new value objects for known HTTP status codes, and/or
 * use the traits in the `Informational`, `Successful`, `Redirection`, `RequestError`, or `RuntimeError` namespaces to add a `getHttpStatus()` method to your own value objects, entities and exceptions
 
-## Using The Status Builders
+## Using The Predefined Value Objects
 
-There's a `StatusBuilder` for each supported HTTP status code.
+There's a predefined value object for each supported HTTP status code.
 
-HTTP Status Code | StatusBuilder Class
+HTTP Status Code | Value Object's Class
 -----------------|--------------------
-100 | `GanbaroDigital\HttpStatusAware\StatusBuilders\BuildContinueStatus`
+100 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus`
+101 | `GanbaroDigital\HttpStatusAware\StatusValues\Informational\SwitchingProtocolsStatus`
 
-You can use each `StatusBuilder` as an object, or you can call it statically:
+You can create new instances of each HTTP status value object, and then use these however you want:
 
-    // as an object
-    $builder = new BuildContinueStatus;
-    $httpStatus = $builder();
+    // import the class(es) you need
+    use GanbaroDigital\HttpStatusAware\StatusValues\Informational\ContinueStatus;
+    use GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus;
 
-    // directly
-    $httpStatus = BuildContinueStatus::value();
+    // create the value object
+    $httpStatus = new ContinueStatus;
 
-Both ways of using it return the same: a `HttpStatus` object that contains the right HTTP status code and reason phrase for that HTTP status.
+    // making comparisons
+    //
+    // echos 'true'
+    echo $httpStatus instanceof ContinueStatus . PHP_EOL;
+    echo $httpStatus instanceof InformationalStatus . PHP_EOL;
+
+Each predefined value object implements one of the following interfaces, so that you can easily tell what type of HTTP status it is:
+
+HTTP Status Code | Interface To Test For
+-----------------|----------------------
+1xx | `GanbaroDigital\HttpStatusAware\Specifications\InformationalStatus`
+2xx | `GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus`
+3xx | `GanbaroDigital\HttpStatusAware\Specifications\RedirectStatus`
+4xx | `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus`
+5xx | `GanbaroDigital\HttpStatusAware\Specifications\RuntimeErrorStatus`
 
 ## Using The Traits
 
@@ -37,6 +52,7 @@ There's a trait for each supported HTTP status code.
 HTTP Status Code | Trait
 -----------------|------
 100 | `GanbaroDigital\HttpStatusAware\Informational\ContinueStatus`
+101 | `GanbaroDigital\HttpStatusAware\Informational\SwitchingProtocolsStatus`
 
 Each trait is used exactly the same way:
 
