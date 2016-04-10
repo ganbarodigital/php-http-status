@@ -8,6 +8,7 @@
   * Added `SwitchingProtocolsStatus` to represent HTTP 101
   * Added `OkStatus` to represent HTTP 200
   * Added `CreatedStatus` to represent HTTP 201
+  * Added `AcceptedStatus` to represent HTTP 202
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes

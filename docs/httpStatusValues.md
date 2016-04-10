@@ -19,12 +19,13 @@ Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specificati
 
 ## Successful Status Codes
 
-These classes represent the HTTP 1xx status codes:
+These classes represent the HTTP 2xx status codes:
 
 HTTP Status Code | Value Object's Class
 -----------------|--------------------
 200 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\OkStatus`
 201 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\CreatedStatus`
+202 | `GanbaroDigital\HttpStatusAware\StatusValues\Successful\AcceptedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\SuccessfulStatus` interface.
 
