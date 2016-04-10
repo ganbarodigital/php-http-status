@@ -113,3 +113,4 @@
   * Added `UpgradeRequiredStatusProvider`
   * Added `UriTooLongStatusProvider`
   * Added `BadGatewayStatusProvider`
+  * Added `GatewayTimeoutStatusProvider`
