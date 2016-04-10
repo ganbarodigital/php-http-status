@@ -124,3 +124,4 @@
   * Added `ServiceUnavailableStatusProvider`
   * Added `UnexpectedErrorStatusProvider`
   * Added `VariantAlsoNegotiatesStatusProvider`
+  * Added `AcceptedStatusProvider`
