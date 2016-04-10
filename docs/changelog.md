@@ -119,3 +119,4 @@
   * Added `InternalServerErrorStatusProvider`
   * Added `LoopDetectedStatusProvider`
   * Added `NetworkAuthenticationRequiredStatusProvider`
+  * Added `NotExtendedStatusProvider`
