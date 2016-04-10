@@ -110,3 +110,4 @@
   * Added `UnavailableForLegalReasonsStatusProvider`
   * Added `UnprocessableEntityStatusProvider`
   * Added `UnsupportedMediaTypeStatusProvider`
+  * Added `UpgradeRequiredStatusProvider`
