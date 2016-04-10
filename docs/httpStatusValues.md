@@ -32,6 +32,7 @@ HTTP Status Code | Value Object's Class
 205 | `GanbaroDigital\HttpStatus\StatusValues\Successful\ResetContentStatus`
 206 | `GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus`
 207 | `GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus`
+208 | `GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus` interface.
 
