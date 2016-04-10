@@ -48,6 +48,8 @@
   * Added `TooManyRequestsStatus` to represent HTTP 429
   * Added `RequestHeaderFieldsTooLargeStatus` to represent HTTP 431
   * Added `UnavailableForLegalReasonsStatus` to represent HTTP 451
+  * Added `InternalServerErrorStatus` to represent HTTP 500
+  * Added `UnexpectedError` to represent HTTP 500
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
