@@ -74,6 +74,7 @@ HTTP Status Code | Value Object's Class
 416 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RangeNotSatisfiableStatus`
 417 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ExpectationFailedStatus`
 418 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ImATeapotStatus`
+421 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\MisdirectedRequestStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
