@@ -63,6 +63,7 @@ HTTP Status Code | Value Object's Class
 405 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\MethodNotAllowedStatus`
 406 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\NotAcceptableStatus`
 407 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\ProxyAuthenticationRequiredStatus`
+408 | `GanbaroDigital\HttpStatusAware\StatusValues\RequestError\RequestTimeoutStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatusAware\Specifications\RequestErrorStatus` interface.
 
