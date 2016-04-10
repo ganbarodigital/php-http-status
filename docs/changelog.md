@@ -104,3 +104,4 @@
   * Added `ProxyAuthenticationRequiredStatusProvider`
   * Added `RangeNotSatisfiableStatusProvider`
   * Added `RequestHeaderFieldsTooLargeStatusProvider`
+  * Added `RequestTimeoutStatusProvider`
