@@ -1,5 +1,5 @@
 {
-    "name": "ganbarodigital/php-http-status-exceptions",
+    "name": "ganbarodigital/php-http-status",
     "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
@@ -10,12 +10,11 @@
         "couscous/couscous": "^1.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.6",
-        "ganbarodigital/php-unit-test-helpers": "^2.1"
+        "phpunit/phpunit": "^4.6"
     },
     "autoload": {
         "psr-4": {
-            "GanbaroDigital\\HttpStatusExceptions\\": "src"
+            "GanbaroDigital\\HttpStatus\\": "src"
         }
     }
 }
