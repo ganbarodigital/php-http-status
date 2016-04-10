@@ -71,6 +71,7 @@ HTTP Status Code | Value Object's Class
 413 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PayloadTooLargeStatus`
 414 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UriTooLongStatus`
 415 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnsupportedMediaTypeStatus`
+416 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RangeNotSatisfiableStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
