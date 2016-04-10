@@ -2,6 +2,12 @@
 
 ## develop branch
 
+Nothing yet.
+
+## v1.0.0 - Sun April 10th 2016
+
+### New
+
 * Added a value object to represent each support HTTP status code.
   * Added `HttpStatus`
   * Added `ContinueStatus` to represent HTTP 100
