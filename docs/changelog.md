@@ -105,3 +105,4 @@
   * Added `RangeNotSatisfiableStatusProvider`
   * Added `RequestHeaderFieldsTooLargeStatusProvider`
   * Added `RequestTimeoutStatusProvider`
+  * Added `TooManyRequestsStatusProvider`
