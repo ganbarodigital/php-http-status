@@ -77,3 +77,4 @@
   * Added `ProcessingStatusProvider`
   * Added `SwitchingProtocolsStatusProvider`
   * Added `FoundStatusProvider`
+  * Added `MovedPermanentlyStatusProvider`
