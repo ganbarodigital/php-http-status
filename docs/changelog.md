@@ -108,3 +108,4 @@
   * Added `TooManyRequestsStatusProvider`
   * Added `UnauthorizedStatusProvider`
   * Added `UnavailableForLegalReasonsStatusProvider`
+  * Added `UnprocessableEntityStatusProvider`
