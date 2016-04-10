@@ -107,3 +107,4 @@
   * Added `RequestTimeoutStatusProvider`
   * Added `TooManyRequestsStatusProvider`
   * Added `UnauthorizedStatusProvider`
+  * Added `UnavailableForLegalReasonsStatusProvider`
