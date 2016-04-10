@@ -102,3 +102,4 @@
   * Added `PreconditionFailedStatusProvider`
   * Added `PreconditionRequiredStatusProvider`
   * Added `ProxyAuthenticationRequiredStatusProvider`
+  * Added `RangeNotSatisfiableStatusProvider`
