@@ -101,5 +101,6 @@ HTTP Status Code | Value Object's Class
 505 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\HttpVersionNotSupportedStatus`
 506 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\VariantAlsoNegotiatesStatus`
 507 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InsufficientStorageStatus`
+508 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\LoopDetectedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.

@@ -57,6 +57,7 @@
   * Added `HttpVersionNotSupportedStatus` to represent HTTP 505
   * Added `VariantAlsoNegotiatesStatus` to represent HTTP 506
   * Added `InsufficientStorageStatus` to represent HTTP 507
+  * Added `LoopDetectedStatus` to represent HTTP 508
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
