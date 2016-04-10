@@ -87,3 +87,4 @@
   * Added `BadRequestStatusProvider`
   * Added `ConflictStatusProvider`
   * Added `ExpectationFailedStatusProvider`
+  * Added `FailedDependencyStatusProvider`
