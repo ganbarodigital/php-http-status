@@ -130,3 +130,4 @@
   * Added `IMUsedStatusProvider`
   * Added `MultiStatusStatusProvider`
   * Added `NoContentStatusProvider`
+  * Added `NonAuthoritativeInformationStatusProvider`
