@@ -86,3 +86,4 @@
   * Added `UseProxyStatusProvider`
   * Added `BadRequestStatusProvider`
   * Added `ConflictStatusProvider`
+  * Added `ExpectationFailedStatusProvider`
