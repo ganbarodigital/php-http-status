@@ -24,6 +24,7 @@
   * Added `NotModifiedStatus` to represent HTTP 304
   * Added `UseProxyStatus` to represent HTTP 305
   * Added `TemporaryRedirectStatus` to represent HTTP 307
+  * Added `PermanentRedirectStatus` to represent HTTP 308
   * Added `BadRequestStatus` to represent HTTP 400
   * Added `UnauthorizedStatus` to represent HTTP 401
   * Added `PaymentRequiredStatus` to represent HTTP 402

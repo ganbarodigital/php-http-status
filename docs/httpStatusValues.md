@@ -50,6 +50,7 @@ HTTP Status Code | Value Object's Class
 304 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\NotModifiedStatus`
 305 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\UseProxyStatus`
 307 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus`
+308 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\PermanentRedirectStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RedirectionStatus` interface.
 
