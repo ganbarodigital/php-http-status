@@ -79,3 +79,4 @@
   * Added `FoundStatusProvider`
   * Added `MovedPermanentlyStatusProvider`
   * Added `MultipleChoicesStatusProvider`
+  * Added `NotModifiedStatusProvider`
