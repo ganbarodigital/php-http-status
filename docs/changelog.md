@@ -81,3 +81,4 @@
   * Added `MultipleChoicesStatusProvider`
   * Added `NotModifiedStatusProvider`
   * Added `PermanentRedirectStatusProvider`
+  * Added `SeeOtherStatusProvider`
