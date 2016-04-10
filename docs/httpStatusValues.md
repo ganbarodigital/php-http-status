@@ -72,6 +72,7 @@ HTTP Status Code | Value Object's Class
 414 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UriTooLongStatus`
 415 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnsupportedMediaTypeStatus`
 416 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RangeNotSatisfiableStatus`
+417 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\ExpectationFailedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 

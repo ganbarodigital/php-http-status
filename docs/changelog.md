@@ -37,6 +37,7 @@
   * Added `UriTooLongStatus` to represent HTTP 414
   * Added `UnsupportedMediaTypeStatus` to represent HTTP 415
   * Added `RangeNotSatisfiableStatus` to represent HTTP 416
+  * Added `ExpectationFailedStatus` to represent HTTP 417
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
