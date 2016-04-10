@@ -15,6 +15,7 @@
   * Added `PartialContentStatus` to represent HTTP 206
   * Added `MultipleChoicesStatus` to represent HTTP 300
   * Added `MovedPermanentlyStatus` to represent HTTP 301
+  * Added `FoundStatus` to represent HTTP 302
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
