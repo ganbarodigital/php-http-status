@@ -52,6 +52,7 @@
   * Added `UnexpectedError` to represent HTTP 500
   * Added `NotImplemented` to represent HTTP 501
   * Added `BadGatewayStatus` to represent HTTP 502
+  * Added `ServiceUnavailableStatus` to represent HTTP 503
 * Added interfaces to represent each group of HTTP status codes.
   * Added `Specifications\InformationalStatus` for HTTP 1xx codes
   * Added `Specifications\SuccessfulStatus` for HTTP 2xx codes
