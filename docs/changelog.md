@@ -80,3 +80,4 @@
   * Added `MovedPermanentlyStatusProvider`
   * Added `MultipleChoicesStatusProvider`
   * Added `NotModifiedStatusProvider`
+  * Added `PermanentRedirectStatusProvider`
