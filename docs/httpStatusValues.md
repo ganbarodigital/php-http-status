@@ -33,6 +33,7 @@ HTTP Status Code | Value Object's Class
 206 | `GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus`
 207 | `GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus`
 208 | `GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus`
+226 | `GanbaroDigital\HttpStatus\StatusValues\Successful\IMUsedStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus` interface.
 
