@@ -48,7 +48,7 @@ use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
 
 /**
  * NotModifiedStatus is a HttpStatus value object that represents
- * the HTTP status code 300: Multiple Choices
+ * the HTTP status code 304: Not Modified
  */
 class NotModifiedStatus extends HttpStatus implements RedirectionStatus
 {

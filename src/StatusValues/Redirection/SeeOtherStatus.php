@@ -48,7 +48,7 @@ use GanbaroDigital\HttpStatusAware\StatusValues\HttpStatus;
 
 /**
  * SeeOtherStatus is a HttpStatus value object that represents
- * the HTTP status code 300: Multiple Choices
+ * the HTTP status code 303: See Other
  */
 class SeeOtherStatus extends HttpStatus implements RedirectionStatus
 {
