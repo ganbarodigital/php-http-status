@@ -121,3 +121,4 @@
   * Added `NetworkAuthenticationRequiredStatusProvider`
   * Added `NotExtendedStatusProvider`
   * Added `NotImplementedStatusProvider`
+  * Added `ServiceUnavailableStatusProvider`
