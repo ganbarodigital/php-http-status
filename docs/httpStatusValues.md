@@ -79,6 +79,7 @@ HTTP Status Code | Value Object's Class
 423 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\LockedStatus`
 424 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\FailedDependencyStatus`
 426 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UpgradeRequiredStatus`
+428 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\PreconditionRequiredStatus`
 
 Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
 
