@@ -131,3 +131,4 @@
   * Added `MultiStatusStatusProvider`
   * Added `NoContentStatusProvider`
   * Added `NonAuthoritativeInformationStatusProvider`
+  * Added `OkStatusProvider`
