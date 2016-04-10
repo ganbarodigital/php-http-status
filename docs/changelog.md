@@ -89,3 +89,4 @@
   * Added `ExpectationFailedStatusProvider`
   * Added `FailedDependencyStatusProvider`
   * Added `ForbiddenStatusProvider`
+  * Added `GoneStatusProvider`
