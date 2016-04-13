@@ -60,7 +60,15 @@
             
             <article>
                 <h1 id="http-status-value-classes">HTTP Status Value Classes</h1>
-<p>Here's the full list of which class represents which HTTP status code.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Classes in the <code>GanbaroDigital\HttpStatus\StatusValues</code> namespace represent the various HTTP status codes. There's one class per supported HTTP status code.</p>
+<h2 id="how-to-use">How To Use</h2>
+<p>Decide which HTTP status code(s) you want to use, and import the corresponding class:</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+
+// creates a new HttpStatus that represents the HTTP 100 code
+$continueStatus = new ContinueStatus;
+echo $continueStatus-&gt;getStatusCode() . PHP_EOL;</code></pre>
 <h2 id="informational-status-codes">Informational Status Codes</h2>
 <p>These classes represent the HTTP 1xx status codes:</p>
 <table>

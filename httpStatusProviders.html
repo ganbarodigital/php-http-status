@@ -60,7 +60,26 @@
             
             <article>
                 <h1 id="http-status-provider-traits">HTTP Status Provider Traits</h1>
-<p>Here's the full list of which trait to use to add a status code to your value object, entity or exception.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Traits in the <code>GanbaroDigital\HttpStatus\StatusProviders</code> namespace will add various HTTP status codes to your classes. There's one trait per supported HTTP status code.</p>
+<h2 id="how-to-use">How To Use</h2>
+<p>Decide which HTTP status code you want to use, and import the corresponding trait:</p>
+<pre><code class="language-php">// import the HttpStatusProvider interface
+// and the trait for the HTTP status code of your choice
+use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
+
+// implement the HttpStatusProvider interface, so that other code
+// can detect that your class has the getHttpStatus() method
+class MyClass implements HttpStatusProvider
+{
+    // add the trait to your class
+    use ContinueStatusProvider;
+}
+
+$obj = new MyClass;
+$httpStatus = $obj-&gt;getHttpStatus();
+</code></pre>
 <h2 id="informational-status-codes">Informational Status Codes</h2>
 <p>These traits add the following HTTP 1xx status codes to your code:</p>
 <table>
