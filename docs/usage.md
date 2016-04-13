@@ -1,5 +1,9 @@
 ---
-    currentMenu: usage
+currentMenu: usage
+pageflow_prev_url: installation.html
+pageflow_prev_title: Installation
+pageflow_next_url: HttpStatus.html
+pageflow_next_title: HttpStatus
 ---
 
 # Usage

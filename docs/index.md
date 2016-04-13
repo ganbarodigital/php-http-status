@@ -1,5 +1,7 @@
 ---
 currentMenu: home
+pageflow_next_title: License
+pageflow_next_url: license.html
 ---
 
 # Introduction

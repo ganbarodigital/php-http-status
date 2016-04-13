@@ -1,5 +1,9 @@
 ---
-currentMenu: httpstatus
+currentMenu: httpStatus
+pageflow_prev_url: usage.html
+pageflow_prev_title: Usage
+pageflow_next_url: httpStatusValues.html
+pageflow_next_title: HTTP Status Value Classes
 ---
 
 # The HttpStatus Value Object

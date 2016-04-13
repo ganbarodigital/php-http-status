@@ -1,6 +1,7 @@
 ---
 template:
-    url: https://github.com/CouscousPHP/Template-Light
+#    url: https://github.com/CouscousPHP/Template-Light
+     directory: docs-new-template
 
 include:
     - docs
@@ -17,7 +18,7 @@ github:
     user: ganbarodigital
     repo: php-http-status
 
-title: PHP HTTP Status Library
+title: HTTP Status Library for PHP
 subTitle: Easy-to-use library to map your value objects, entities and exceptions onto HTTP status codes
 
 menu:

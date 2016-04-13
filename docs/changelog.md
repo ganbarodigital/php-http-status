@@ -1,3 +1,8 @@
+---
+currentMenu: changelog
+pageflow_prev_url: httpStatusProviders.html
+pageflow_prev_title: HTTP Status Provider Traits
+---
 # CHANGELOG
 
 ## develop branch

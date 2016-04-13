@@ -1,5 +1,9 @@
 ---
 currentMenu: license
+pageflow_prev_url: index.html
+pageflow_prev_title: Introduction
+pageflow_next_url: installation.html
+pageflow_next_title: Installation
 ---
 # New BSD License
 

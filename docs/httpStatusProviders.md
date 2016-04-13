@@ -1,5 +1,9 @@
 ---
 currentMenu: httpStatusProviders
+pageflow_prev_url: httpStatusValues.html
+pageflow_prev_title: HTTP Status Value Classes
+pageflow_next_url: changelog.html
+pageflow_next_title: Changelog
 ---
 
 # HTTP Status Provider Traits
