@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>PHP HTTP Status Library</title>
-
-        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/highlight.dark.css">
-        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/css/main.css">
+        <!--[if lt IE 9]>
+            <script src="assets/html5shiv.js"></script>
+            <script src="assets/html5printshiv.js"></script>
+        <![endif]-->
+        <meta charset="utf-8"/>
+        <title>HTTP Status Library for PHP from Ganbaro Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://ganbarodigital.github.io/php-http-status/assets/docs.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/assets/prism.css">
+        <script src="http://ganbarodigital.github.io/php-http-status/assets/prism.js"></script>
     </head>
-    <body>
-
-        <header class="navbar navbar-default navbar-fixed-top">
-
-            <a class="navbar-brand" href="http://ganbarodigital.github.io/php-http-status/">
-                PHP HTTP Status Library
-                <small class="hidden-xs hidden-sm">
-                    Easy-to-use library to map your value objects, entities and exceptions onto HTTP status codes
-                </small>
-            </a>
-
-                            <a href="https://github.com/ganbarodigital/php-http-status">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-                </a>
-            
+    <body data-ishi-anchors="1">
+        <header role="banner">
+            <div>
+                <p style="font-size: 34px; padding-top: 10px">HTTP Status Library for PHP</p>
+                <p style="font-size: 18px; border-top: 1px solid; padding-top: 10px">Add HTTP Status Codes To Your Code</p>
+            </div>
+            <!--<a href="http://ganbarodigital.github.io/php-http-status/index.html">
+                <img src="http://ganbarodigital.github.io/php-http-status/assets/ganbarodigital.svg" width="60" height="60" style="vertical-align: middle; float: left; margin-right: 15px">
+            </a>-->
+            <nav class="navbar topbar">
+                <ul>
+                                            <li class="current">
+                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
+                        </li>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/usage.html">Usage</a>
+                        </li>
+                                    </ul>
+            </nav>
         </header>
-
-        <main class="container-fluid">
-            <div class="row">
-
-                
-                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
-
-                        <ul class="nav nav-pills nav-stacked">
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/index.html">
-                                        Introduction
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/license.html">
-                                        License
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/installation.html">
-                                        Installation
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/usage.html">
-                                        Usage
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/HttpStatus.html">
-                                        HttpStatus
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/httpStatusValues.html">
-                                        HTTP Status Value Classes
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/httpStatusProviders.html">
-                                        HTTP Status Provider Traits
-                                    </a>
-                                </li>
-                                                            <li class="">
-                                    <a href="http://ganbarodigital.github.io/php-http-status/changelog.html">
-                                        Changelog
-                                    </a>
-                                </li>
-                                                    </ul>
-
-                    </nav>
-
-                
-                <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h1 id="changelog">CHANGELOG</h1>
+                                                        <header role="subnav">
+                        <nav class="navbar">
+                            <ul>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/index.html">Introduction</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/license.html">License</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/installation.html">Installation</a>
+                                    </li>
+                                                                    <li class="current">
+                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/changelog.html">Changelog</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </header>
+                                                                <main role="main">
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="httpStatusProviders.html">Prev: HTTP Status Provider Traits</a></li>
+                                                      <li></li>
+                                </ul>
+            </nav>
+            
+            <article>
+                <h1 id="changelog">CHANGELOG</h1>
 <h2 id="develop-branch">develop branch</h2>
 <p>Nothing yet.</p>
 <h2 id="v100---sun-april-10th-2016">v1.0.0 - Sun April 10th 2016</h2>
@@ -226,30 +204,30 @@
 <li>Added <code>ResetContentStatusProvider</code></li>
 </ul></li>
 </ul>
-                </section>
+            </article>
 
-            </div>
-        </main>
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="httpStatusProviders.html">Prev: HTTP Status Provider Traits</a></li>
+                                                      <li></li>
+                                </ul>
+            </nav>
+                    </main>
 
+        <aside class="sidebar">
+            <h2>This Page</h2>
+            <nav class="toc" data-type="ishi-toc" data-max-depth="3">
+            </nav>
+        </aside>
         <footer>
-            <div class="container-fluid">
-                <p class="text-muted">
-                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+            <div class="strapline">
+                <p>Copyright &copy; 2015 <a href="http://ganbarodigital.com">Ganbaro Digital Ltd</a>. Released under the <a href="http://ganbarodigital.github.io/php-http-status/license.html">New BSD</a> license.
+                                            Find HTTP Status Library for PHP on <a href="https://github.com/ganbarodigital/php-http-status">GitHub</a>.
+                                        Built with <a href="http://couscous.io/">Couscous</a>.
                 </p>
             </div>
         </footer>
-
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
-
-        <script>
-            $(function() {
-                $("section>h1").wrap('<div class="page-header" />');
-                // Syntax highlighting
-                hljs.initHighlightingOnLoad();
-            });
-        </script>
-
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/laroux.js"></script>
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/ishi.js"></script>
     </body>
 </html>
