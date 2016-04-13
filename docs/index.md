@@ -1,5 +1,6 @@
 ---
-currentMenu: home
+currentSection: overview
+currentItem: home
 pageflow_next_title: License
 pageflow_next_url: license.html
 ---
@@ -15,6 +16,8 @@ The _HTTP Status Library_ is an easy-to-use way to add HTTP status codes to your
 * Implement the `HttpStatusProvider` interface to show that your value objects, entities and exceptions can provide a HTTP status code.
 
 ## Goals
+
+This library is guided by these goals:
 
 * Provide a library of known HTTP status codes
 * Provide an easy way for value objects, entities and exceptions to map onto HTTP status codes

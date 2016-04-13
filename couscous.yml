@@ -19,38 +19,48 @@ github:
     repo: php-http-status
 
 title: HTTP Status Library for PHP
-subTitle: Easy-to-use library to map your value objects, entities and exceptions onto HTTP status codes
+subTitle: Add HTTP Status Codes To Your Code
 
 menu:
-    items:
-        home:
-            text: Introduction
-            relativeUrl: index.html
+    overview:
+        text: Overview
+        relativeUrl: index.html
 
-        license:
-            text: License
-            relativeUrl: license.html
+        items:
+            home:
+                text: Introduction
+                relativeUrl: index.html
 
-        installation:
-            text: Installation
-            relativeUrl: installation.html
+            license:
+                text: License
+                relativeUrl: license.html
 
-        usage:
-            text: Usage
-            relativeUrl: usage.html
+            installation:
+                text: Installation
+                relativeUrl: installation.html
 
-        httpStatus:
-            text: HttpStatus
-            relativeUrl: HttpStatus.html
+            changelog:
+                text: Changelog
+                relativeUrl: changelog.html
 
-        httpStatusValues:
-            text: HTTP Status Value Classes
-            relativeUrl: httpStatusValues.html
 
-        httpStatusProviders:
-            text: HTTP Status Provider Traits
-            relativeUrl: httpStatusProviders.html
+    usage:
+        text: Usage
+        relativeUrl: usage.html
 
-        changelog:
-            text: Changelog
-            relativeUrl: changelog.html
+        items:
+            usage:
+                text: Usage
+                relativeUrl: usage.html
+
+            httpStatus:
+                text: HttpStatus
+                relativeUrl: HttpStatus.html
+
+            httpStatusValues:
+                text: HTTP Status Value Classes
+                relativeUrl: httpStatusValues.html
+
+            httpStatusProviders:
+                text: HTTP Status Provider Traits
+                relativeUrl: httpStatusProviders.html

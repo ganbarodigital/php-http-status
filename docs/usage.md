@@ -1,5 +1,6 @@
 ---
-currentMenu: usage
+currentSection: usage
+currentItem: usage
 pageflow_prev_url: installation.html
 pageflow_prev_title: Installation
 pageflow_next_url: HttpStatus.html
@@ -10,7 +11,7 @@ pageflow_next_title: HttpStatus
 
 ## Introduction
 
-You can use the _HTTP Status Aware Library_ in two ways:
+You can use the _HTTP Status Library_ in two ways:
 
 * simply instantiate new value objects for known HTTP status codes, and/or
 * use the traits in the `StatusProviders` namespace to add a `getHttpStatus()` method to your own value objects, entities and exceptions
@@ -21,18 +22,20 @@ There's a predefined value object for each supported HTTP status code. The full 
 
 You can create new instances of each HTTP status value object, and then use these however you want:
 
-    // import the class(es) you need
-    use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
-    use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+```php
+// import the class(es) you need
+use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
 
-    // create the value object
-    $httpStatus = new ContinueStatus;
+// create the value object
+$httpStatus = new ContinueStatus;
 
-    // making comparisons
-    //
-    // echos 'true'
-    echo $httpStatus instanceof ContinueStatus . PHP_EOL;
-    echo $httpStatus instanceof InformationalStatus . PHP_EOL;
+// making comparisons
+//
+// echos '1'
+echo $httpStatus instanceof ContinueStatus . PHP_EOL;
+echo $httpStatus instanceof InformationalStatus . PHP_EOL;
+```
 
 Each predefined value object implements one of the following interfaces, so that you can easily tell what type of HTTP status it is:
 
@@ -50,22 +53,26 @@ There's a trait for each supported HTTP status code. The full list of traits is 
 
 Each trait is used exactly the same way:
 
-    // import the trait and associated interface
-    use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
-    use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+```php
+// import the trait and associated interface
+use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
+use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
 
-    class MyValueObject implements HttpStatusProvider
-    {
-        use ContinueStatusProvider;
-    }
+class MyValueObject implements HttpStatusProvider
+{
+    use ContinueStatusProvider;
+}
+```
 
 Each trait adds a public method `getHttpStatus()` to your class:
 
-    /**
-     * returns the HttpStatus that we have mapped onto
-     *
-     * @return HttpStatus
-     */
-    public function getHttpStatus();
+```php
+/**
+ * returns the HttpStatus that we have mapped onto
+ *
+ * @return HttpStatus
+ */
+public function getHttpStatus();
+```
 
 The trait that you pick decides which HTTP status that `getHttpStatus()` will return.
