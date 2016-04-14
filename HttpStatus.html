@@ -81,7 +81,7 @@ class HttpStatus
 <p>You can find a full list of HTTP status codes, and their normal descriptions, in <a href="https://tools.ietf.org/html/rfc7231#section-6.1">section 6.1 of RFC 7231</a>.</p>
 <h2 id="getstatuscode">getStatusCode()</h2>
 <p><code>HttpStatus::getStatusCode()</code> returns the HTTP status code as an integer:</p>
-<pre><code class="language-php">use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 $status = new HttpStatus(404, "Not Found");
 $statusCode = $status-&gt;getStatusCode();
@@ -90,7 +90,7 @@ $statusCode = $status-&gt;getStatusCode();
 <p>HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.</p>
 <h2 id="getreasonphrase">getReasonPhrase()</h2>
 <p><code>HttpStatus::getReasonPhrase()</code> returns the HTTP reason phrase as a string:</p>
-<pre><code class="language-php">use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 $status = new HttpStatus(404, "Not Found");
 $reasonPhrase = $status-&gt;getReasonPhrase();
@@ -99,7 +99,7 @@ $reasonPhrase = $status-&gt;getReasonPhrase();
 <p>HTTP reason phrases are part of the HTTP standards. They're informational, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.</p>
 <h2 id="getstatusline">getStatusLine()</h2>
 <p><code>HttpStatus::getStatusLine()</code> returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.</p>
-<pre><code class="language-php">use GanbaroDigital\\HttpStatus\\StatusValues\\HttpStatus;
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 $status = new HttpStatus(404, "Not Found");
 $statusLine = $status-&gt;getStatusLine();
