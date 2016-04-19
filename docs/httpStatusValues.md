@@ -2,9 +2,9 @@
 currentSection: usage
 currentItem: httpStatusValues
 pageflow_prev_url: HttpStatus.html
-pageflow_prev_title: HttpStatus
+pageflow_prev_text: HttpStatus
 pageflow_next_url: httpStatusProviders.html
-pageflow_next_title: HTTP Status Provider Traits
+pageflow_next_text: HTTP Status Provider Traits
 ---
 
 # HTTP Status Value Classes

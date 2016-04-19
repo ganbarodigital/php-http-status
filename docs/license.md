@@ -2,9 +2,9 @@
 currentSection: overview
 currentItem: license
 pageflow_prev_url: index.html
-pageflow_prev_title: Introduction
+pageflow_prev_text: Introduction
 pageflow_next_url: installation.html
-pageflow_next_title: Installation
+pageflow_next_text: Installation
 ---
 # New BSD License
 

@@ -2,9 +2,9 @@
 currentSection: overview
 currentItem: installation
 pageflow_prev_url: license.html
-pageflow_prev_title: License
+pageflow_prev_text: License
 pageflow_next_url: usage.html
-pageflow_next_title: Usage
+pageflow_next_text: Usage
 ---
 
 # Installation

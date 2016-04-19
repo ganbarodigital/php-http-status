@@ -2,13 +2,16 @@
 currentSection: overview
 currentItem: changelog
 pageflow_prev_url: httpStatusProviders.html
-pageflow_prev_title: HTTP Status Provider Traits
+pageflow_prev_text: HTTP Status Provider Traits
 ---
 # CHANGELOG
 
 ## develop branch
 
-Nothing yet.
+### Docs
+
+* Switched to downloaded template.
+* Switched to Stuart's fork of Couscous.
 
 ## v1.0.0 - Sun April 10th 2016
 

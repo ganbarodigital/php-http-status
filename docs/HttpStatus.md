@@ -2,9 +2,9 @@
 currentSection: usage
 currentItem: httpStatus
 pageflow_prev_url: usage.html
-pageflow_prev_title: Usage
+pageflow_prev_text: Usage
 pageflow_next_url: httpStatusValues.html
-pageflow_next_title: HTTP Status Value Classes
+pageflow_next_text: HTTP Status Value Classes
 ---
 
 # The HttpStatus Value Object

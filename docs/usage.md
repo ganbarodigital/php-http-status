@@ -2,9 +2,9 @@
 currentSection: usage
 currentItem: usage
 pageflow_prev_url: installation.html
-pageflow_prev_title: Installation
+pageflow_prev_text: Installation
 pageflow_next_url: HttpStatus.html
-pageflow_next_title: HttpStatus
+pageflow_next_text: HttpStatus
 ---
 
 # Usage
