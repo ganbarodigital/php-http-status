@@ -1,8 +1,20 @@
+---
+currentSection: overview
+currentItem: changelog
+pageflow_prev_url: httpStatusProviders.html
+pageflow_prev_text: HTTP Status Provider Traits
+---
 # CHANGELOG
 
 ## develop branch
 
-Nothing yet.
+## v1.0.1 - Mon April 19th 2016
+
+### Docs
+
+* Switched to downloaded template.
+* Switched to Stuart's fork of Couscous.
+* Made Couscous a dev dependency.
 
 ## v1.0.0 - Sun April 10th 2016
 

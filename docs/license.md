@@ -1,10 +1,21 @@
 ---
-currentMenu: license
+currentSection: overview
+currentItem: license
+pageflow_prev_url: index.html
+pageflow_prev_text: Introduction
+pageflow_next_url: installation.html
+pageflow_next_text: Installation
 ---
 # New BSD License
 
-Copyright (c) 2016-present, Ganbaro Digital Ltd
+## Copyright Notice
+
+Copyright (c) 2016-present, Ganbaro Digital Ltd.
+Registered in England and Wales. Company Number 9394118.
+
 All rights reserved.
+
+## License Terms
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:

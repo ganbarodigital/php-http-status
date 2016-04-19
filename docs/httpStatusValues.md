@@ -1,10 +1,29 @@
 ---
-currentMenu: httpStatusValues
+currentSection: usage
+currentItem: httpStatusValues
+pageflow_prev_url: HttpStatus.html
+pageflow_prev_text: HttpStatus
+pageflow_next_url: httpStatusProviders.html
+pageflow_next_text: HTTP Status Provider Traits
 ---
 
 # HTTP Status Value Classes
 
-Here's the full list of which class represents which HTTP status code.
+## Introduction
+
+Classes in the `GanbaroDigital\HttpStatus\StatusValues` namespace represent the various HTTP status codes. There's one class per supported HTTP status code.
+
+## How To Use
+
+Decide which HTTP status code(s) you want to use, and import the corresponding class:
+
+```php
+use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+
+// creates a new HttpStatus that represents the HTTP 100 code
+$continueStatus = new ContinueStatus;
+echo $continueStatus->getStatusCode() . PHP_EOL;
+```
 
 ## Informational Status Codes
 

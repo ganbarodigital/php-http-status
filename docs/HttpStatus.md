@@ -1,20 +1,31 @@
 ---
-currentMenu: httpstatus
+currentSection: usage
+currentItem: httpStatus
+pageflow_prev_url: usage.html
+pageflow_prev_text: Usage
+pageflow_next_url: httpStatusValues.html
+pageflow_next_text: HTTP Status Value Classes
 ---
 
 # The HttpStatus Value Object
 
+## Introduction
+
 The `HttpStatus` value object represents a single HTTP status:
 
-    namespace GanbaroDigital\\HttpStatus\\StatusValues;
+```php
+namespace GanbaroDigital\HttpStatus\StatusValues;
 
-    class HttpStatus
-    {
-        public function __construct($statusCode, $reasonPhrase);
-        public function getStatusCode();
-        public function getReasonPhrase();
-        public function getStatusLine();
-    }
+class HttpStatus
+{
+    public function __construct($statusCode, $reasonPhrase);
+    public function getStatusCode();
+    public function getReasonPhrase();
+    public function getStatusLine();
+}
+```
+
+All of the [HTTP Status Value objects](httpStatusValues.html) are instances of `HttpStatus`.
 
 ## Construction
 
@@ -29,12 +40,14 @@ You can find a full list of HTTP status codes, and their normal descriptions, in
 
 `HttpStatus::getStatusCode()` returns the HTTP status code as an integer:
 
-    use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
+```php
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-    $status = new HttpStatus(404, "Not Found");
-    $statusCode = $status->getStatusCode();
+$status = new HttpStatus(404, "Not Found");
+$statusCode = $status->getStatusCode();
 
-    // $statusCode contains the value '400' as an integer
+// $statusCode contains the value '400' as an integer
+```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
@@ -42,12 +55,14 @@ HTTP status codes are part of the HTTP standards. Servers, proxies and clients u
 
 `HttpStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
-    use GanbaroDigital\\HttpStatus\\StatusValues\HttpStatus;
+```php
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-    $status = new HttpStatus(404, "Not Found");
-    $reasonPhrase = $status->getReasonPhrase();
+$status = new HttpStatus(404, "Not Found");
+$reasonPhrase = $status->getReasonPhrase();
 
-    // $reasonPhrase contains the value 'Not Found' as a string
+// $reasonPhrase contains the value 'Not Found' as a string
+```
 
 HTTP reason phrases are part of the HTTP standards. They're informational, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
@@ -55,12 +70,14 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 
 `HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
-    use GanbaroDigital\\HttpStatus\\StatusValues\\HttpStatus;
+```php
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-    $status = new HttpStatus(404, "Not Found");
-    $statusLine = $status->getStatusLine();
+$status = new HttpStatus(404, "Not Found");
+$statusLine = $status->getStatusLine();
 
-    // $statusLine contains the value "404 Not Found" as a string
+// $statusLine contains the value "404 Not Found" as a string
 
-    // use $statusLine to set the response from your PHP app
-    header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
+// use $statusLine to set the response from your PHP app
+header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
+```
