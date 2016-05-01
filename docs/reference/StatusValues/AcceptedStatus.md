@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: OkStatus.html
-pageflow_prev_text: OkStatus class
-pageflow_next_url: AcceptedStatus.html
-pageflow_next_text: AcceptedStatus class
+pageflow_prev_url: CreatedStatus.html
+pageflow_prev_text: CreatedStatus class
+pageflow_next_url: CreatedStatus.html
+pageflow_next_text: CreatedStatus class
 ---
 
-# CreatedStatus
+# AcceptedStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`CreatedStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 201 Created status.
+`AcceptedStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 202 Accepted status.
 
 ## Public Interface
 
-`CreatedStatus` has the following public interface:
+`AcceptedStatus` has the following public interface:
 
 ```php
-// CreatedStatus lives in this namespace
+// AcceptedStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class CreatedStatus
+class AcceptedStatus
   extends HttpStatus
   implements SuccessfulStatus
 {
@@ -67,55 +67,55 @@ class CreatedStatus
 
 ### Construction
 
-The constructor for `CreatedStatus` takes no parameters.
+The constructor for `AcceptedStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
 
-$httpStatus = new CreatedStatus;
+$httpStatus = new AcceptedStatus;
 ```
 
 ### getStatusCode()
 
-`CreatedStatus::getStatusCode()` returns the HTTP status code as an integer:
+`AcceptedStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
 
-$httpStatus = new CreatedStatus;
+$httpStatus = new AcceptedStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '201' as an integer
+// $statusCode contains the value '202' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`CreatedStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`AcceptedStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
 
-$httpStatus = new CreatedStatus;
+$httpStatus = new AcceptedStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Created' as a string
+// $reasonPhrase contains the value 'Accepted' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're Successful, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`CreatedStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`AcceptedStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
 
-$httpStatus = new CreatedStatus;
+$httpStatus = new AcceptedStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "201 Created" as a string
+// $statusLine contains the value "202 Accepted" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Successful\CreatedStatus
+    GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus
      [x] Can instantiate
      [x] Is successful status
-     [x] Has status code 201
+     [x] Has status code 202
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -165,4 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
-* [`CreatedStatusProvider`](../StatusProviders/CreatedStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
+* [`AcceptedStatusProvider`](../StatusProviders/AcceptedStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
