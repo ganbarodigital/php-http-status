@@ -96,7 +96,7 @@ class NoContentStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode204()
     {
         // ----------------------------------------------------------------
         // setup your test
