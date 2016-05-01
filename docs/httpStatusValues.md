@@ -35,7 +35,7 @@ HTTP Status Code | Value Object's Class
 101 | `GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus`
 102 | `GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\InformationalStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Interfaces\InformationalStatus` interface.
 
 ## Successful Status Codes
 
@@ -54,7 +54,7 @@ HTTP Status Code | Value Object's Class
 208 | `GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus`
 226 | `GanbaroDigital\HttpStatus\StatusValues\Successful\IMUsedStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus` interface.
 
 ## Redirection Status Codes
 
@@ -71,7 +71,7 @@ HTTP Status Code | Value Object's Class
 307 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus`
 308 | `GanbaroDigital\HttpStatus\StatusValues\Redirection\PermanentRedirectStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RedirectionStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Interfaces\RedirectionStatus` interface.
 
 ## RequestError Status Codes
 
@@ -108,7 +108,7 @@ HTTP Status Code | Value Object's Class
 431 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestHeaderFieldsTooLargeStatus`
 451 | `GanbaroDigital\HttpStatus\StatusValues\RequestError\UnavailableForLegalReasonsStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus` interface.
 
 ## RuntimeError Status Codes
 
@@ -129,4 +129,4 @@ HTTP Status Code | Value Object's Class
 510 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotExtendedStatus`
 511 | `GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NetworkAuthenticationRequiredStatus`
 
-Each of these classes implements the `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus` interface.
+Each of these classes implements the `GanbaroDigital\HttpStatus\Interfaces\RuntimeErrorStatus` interface.

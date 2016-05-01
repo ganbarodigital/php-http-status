@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\Redirection;
 
-use GanbaroDigital\HttpStatus\Specifications\RedirectionStatus;
+use GanbaroDigital\HttpStatus\Interfaces\RedirectionStatus;
 use GanbaroDigital\HttpStatus\StatusValues\Redirection\UseProxyStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 

@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\RequestError;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\RequestError\ForbiddenStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\RequestError\ForbiddenStatus;
 use PHPUnit_Framework_TestCase;

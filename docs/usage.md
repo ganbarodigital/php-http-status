@@ -25,7 +25,7 @@ You can create new instances of each HTTP status value object, and then use thes
 ```php
 // import the class(es) you need
 use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
-use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
 
 // create the value object
 $httpStatus = new ContinueStatus;
@@ -41,11 +41,11 @@ Each predefined value object implements one of the following interfaces, so that
 
 HTTP Status Code | Interface To Test For
 -----------------|----------------------
-1xx | `GanbaroDigital\HttpStatus\Specifications\InformationalStatus`
-2xx | `GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus`
-3xx | `GanbaroDigital\HttpStatus\Specifications\RedirectStatus`
-4xx | `GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus`
-5xx | `GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus`
+1xx | `GanbaroDigital\HttpStatus\Interfaces\InformationalStatus`
+2xx | `GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus`
+3xx | `GanbaroDigital\HttpStatus\Interfaces\RedirectStatus`
+4xx | `GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus`
+5xx | `GanbaroDigital\HttpStatus\Interfaces\RuntimeErrorStatus`
 
 ## Using The Traits
 
@@ -56,7 +56,7 @@ Each trait is used exactly the same way:
 ```php
 // import the trait and associated interface
 use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 
 class MyValueObject implements HttpStatusProvider
 {

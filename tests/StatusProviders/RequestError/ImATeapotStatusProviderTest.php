@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\RequestError;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\RequestError\ImATeapotStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\RequestError\ImATeapotStatus;
 use PHPUnit_Framework_TestCase;

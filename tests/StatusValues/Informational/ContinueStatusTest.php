@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\Informational;
 
-use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
 use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 

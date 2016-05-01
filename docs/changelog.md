@@ -8,6 +8,10 @@ pageflow_prev_text: HTTP Status Provider Traits
 
 ## develop branch
 
+### B/C Break
+
+The `Specifications` namespace has been renamed to `Interfaces`, to avoid any future confusion with the Specification pattern that is common in Domain-Driven Design. No-one else is using this package atm (according to Packagist), which is the only reason I'm not bumping this up to v2.0.
+
 ## v1.0.1 - Mon April 19th 2016
 
 ### Docs

@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\Successful;
 
-use GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus;
+use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 

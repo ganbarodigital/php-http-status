@@ -20,7 +20,7 @@ Decide which HTTP status code you want to use, and import the corresponding trai
 ```php
 // import the HttpStatusProvider interface
 // and the trait for the HTTP status code of your choice
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
 
 // implement the HttpStatusProvider interface, so that other code

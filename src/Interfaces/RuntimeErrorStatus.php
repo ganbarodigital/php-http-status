@@ -34,19 +34,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/Specifications
+ * @package   HttpStatus/Interfaces
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatus\Specifications;
+namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * InformationalStatus is implemented by any HttpStatus that has a HTTP
- * status code of 1xx.
+ * RuntimeErrorStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 5xx.
  */
-interface InformationalStatus
+interface RuntimeErrorStatus
 {
 }

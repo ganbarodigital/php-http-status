@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\Successful;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\Successful\ResetContentStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\Successful\ResetContentStatus;
 use PHPUnit_Framework_TestCase;

@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\RequestError;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnavailableForLegalReasonsStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\RequestError\UnavailableForLegalReasonsStatus;
 use PHPUnit_Framework_TestCase;

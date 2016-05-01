@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\RequestError;
 
-use GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus;
 use GanbaroDigital\HttpStatus\StatusValues\RequestError\LengthRequiredStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 

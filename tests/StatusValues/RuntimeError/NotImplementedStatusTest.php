@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\RuntimeError;
 
-use GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\RuntimeErrorStatus;
 use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotImplementedStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 

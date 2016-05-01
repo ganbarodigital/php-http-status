@@ -34,19 +34,34 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/Specifications
+ * @package   HttpStatus/Interfaces
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatus\Specifications;
+namespace GanbaroDigital\HttpStatus\Interfaces;
+
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
 /**
- * RuntimeErrorStatus is implemented by any HttpStatus that has a HTTP
- * status code of 5xx.
+ * HttpStatusProvider is implemented by any entity, value class or exception that
+ * is mapped onto a HTTP status code.
+ *
+ * All of the traits in the `GanbaroDigital\HttpStatus\StatusProviders` namespace
+ * implement this interface. However, PHP does not allow traits to state that
+ * they implement an interface (grrr).
+ *
+ * You need to manually add 'implements HttpStatusProvider' to every one
+ * of your exception classes that uses any of our `StatusProvider` traits.
  */
-interface RuntimeErrorStatus
+interface HttpStatusProvider
 {
+    /**
+     * returns the HTTP status code that best represents this object
+     *
+     * @return HttpStatus
+     */
+    public function getHttpStatus();
 }
