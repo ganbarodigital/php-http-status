@@ -3,8 +3,8 @@ currentSection: reference
 currentItem: StatusValues
 pageflow_prev_url: AlreadyReportedStatus.html
 pageflow_prev_text: AlreadyReportedStatus class
-pageflow_next_url: CreatedStatus.html
-pageflow_next_text: CreatedStatus class
+pageflow_next_url: MultipleChoicesStatus.html
+pageflow_next_text: MultipleChoicesStatus class
 ---
 
 # IMUsedStatus
