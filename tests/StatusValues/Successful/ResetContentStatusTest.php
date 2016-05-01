@@ -96,7 +96,7 @@ class ResetContentStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode205()
     {
         // ----------------------------------------------------------------
         // setup your test
