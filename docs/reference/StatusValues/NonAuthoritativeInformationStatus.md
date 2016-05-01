@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: CreatedStatus.html
-pageflow_prev_text: CreatedStatus class
-pageflow_next_url: NonAuthoritativeInformationStatus.html
-pageflow_next_text: NonAuthoritativeInformationStatus class
+pageflow_prev_url: AcceptedStatus.html
+pageflow_prev_text: AcceptedStatus class
+pageflow_next_url: CreatedStatus.html
+pageflow_next_text: CreatedStatus class
 ---
 
-# AcceptedStatus
+# NonAuthoritativeInformationStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`AcceptedStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 202 Accepted status.
+`NonAuthoritativeInformationStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 203 Non-Authoritative Information status.
 
 ## Public Interface
 
-`AcceptedStatus` has the following public interface:
+`NonAuthoritativeInformationStatus` has the following public interface:
 
 ```php
-// AcceptedStatus lives in this namespace
+// NonAuthoritativeInformationStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class AcceptedStatus
+class NonAuthoritativeInformationStatus
   extends HttpStatus
   implements SuccessfulStatus
 {
@@ -67,55 +67,55 @@ class AcceptedStatus
 
 ### Construction
 
-The constructor for `AcceptedStatus` takes no parameters.
+The constructor for `NonAuthoritativeInformationStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus;
 
-$httpStatus = new AcceptedStatus;
+$httpStatus = new NonAuthoritativeInformationStatus;
 ```
 
 ### getStatusCode()
 
-`AcceptedStatus::getStatusCode()` returns the HTTP status code as an integer:
+`NonAuthoritativeInformationStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus;
 
-$httpStatus = new AcceptedStatus;
+$httpStatus = new NonAuthoritativeInformationStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '202' as an integer
+// $statusCode contains the value '203' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`AcceptedStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`NonAuthoritativeInformationStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus;
 
-$httpStatus = new AcceptedStatus;
+$httpStatus = new NonAuthoritativeInformationStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Accepted' as a string
+// $reasonPhrase contains the value 'Non-Authoritative Information' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're Successful, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`AcceptedStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`NonAuthoritativeInformationStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus;
 
-$httpStatus = new AcceptedStatus;
+$httpStatus = new NonAuthoritativeInformationStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "202 Accepted" as a string
+// $statusLine contains the value "203 Non-Authoritative Information" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Successful\AcceptedStatus
+    GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus
      [x] Can instantiate
      [x] Is successful status
-     [x] Has status code 202
+     [x] Has status code 203
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -165,4 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
-* [`AcceptedStatusProvider`](../StatusProviders/AcceptedStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
+* [`NonAuthoritativeInformationStatusProvider`](../StatusProviders/NonAuthoritativeInformationStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
