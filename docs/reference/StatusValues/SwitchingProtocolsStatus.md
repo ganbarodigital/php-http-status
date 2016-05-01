@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: HttpStatus.html
-pageflow_prev_text: HttpStatus class
-pageflow_next_url: SwitchingProtocolsStatus.html
-pageflow_next_text: SwitchingProtocolsStatus class
+pageflow_prev_url: ContinueStatus.html
+pageflow_prev_text: ContinueStatus class
+pageflow_next_url: ProcessingStatus.html
+pageflow_next_text: ProcessingStatus class
 ---
 
-# ContinueStatus
+# SwitchingProtocolsStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`ContinueStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 100 Continue status.
+`SwitchingProtocolsStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 101 Switching Protocols status.
 
 ## Public Interface
 
-`ContinueStatus` has the following public interface:
+`SwitchingProtocolsStatus` has the following public interface:
 
 ```php
-// ContinueStatus lives in this namespace
+// SwitchingProtocolsStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class ContinueStatus
+class SwitchingProtocolsStatus
   extends HttpStatus
   implements InformationalStatus
 {
@@ -67,40 +67,40 @@ class ContinueStatus
 
 ### Construction
 
-The constructor for `ContinueStatus` takes no parameters.
+The constructor for `SwitchingProtocolsStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus;
 
-$httpStatus = new ContinueStatus;
+$httpStatus = new SwitchingProtocolsStatus;
 ```
 
 ### getStatusCode()
 
-`ContinueStatus::getStatusCode()` returns the HTTP status code as an integer:
+`SwitchingProtocolsStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus;
 
-$httpStatus = new ContinueStatus;
+$httpStatus = new SwitchingProtocolsStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '100' as an integer
+// $statusCode contains the value '101' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`ContinueStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`SwitchingProtocolsStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus;
 
-$httpStatus = new ContinueStatus;
+$httpStatus = new SwitchingProtocolsStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Continue' as a string
+// $reasonPhrase contains the value 'Switching Protocols' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're informational, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
@@ -110,12 +110,12 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 `HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus;
 
-$httpStatus = new ContinueStatus;
+$httpStatus = new SwitchingProtocolsStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "100 Continue" as a string
+// $statusLine contains the value "101 Switching Protocols" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus
+    GanbaroDigitalTest\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus
      [x] Can instantiate
      [x] Is informational status
-     [x] Has status code 100
+     [x] Has status code 101
      [x] Has correct reason phrase
      [x] Has correct status line
 

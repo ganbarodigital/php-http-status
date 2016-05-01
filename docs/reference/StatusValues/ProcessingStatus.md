@@ -1,8 +1,8 @@
 ---
 currentSection: reference
-currentItem: ProcessingStatus
-pageflow_prev_url: ContinueStatus.html
-pageflow_prev_text: ContinueStatus class
+currentItem: StatusValues
+pageflow_prev_url: SwitchingProtocolsStatus.html
+pageflow_prev_text: SwitchingProtocolsStatus class
 pageflow_next_url: ProcessingStatus.html
 pageflow_next_text: ProcessingStatus class
 ---
