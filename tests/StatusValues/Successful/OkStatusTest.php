@@ -96,7 +96,7 @@ class OkStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode200()
     {
         // ----------------------------------------------------------------
         // setup your test
