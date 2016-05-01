@@ -107,7 +107,7 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 
 ### getStatusLine()
 
-`HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`ProcessingStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
 use GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus;

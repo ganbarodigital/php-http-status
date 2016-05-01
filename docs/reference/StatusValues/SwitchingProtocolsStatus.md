@@ -107,7 +107,7 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 
 ### getStatusLine()
 
-`HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`SwitchingProtocolsStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
 use GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus;
@@ -125,7 +125,7 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigitalTest\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus
+    GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus
      [x] Can instantiate
      [x] Is informational status
      [x] Has status code 101
