@@ -3,8 +3,8 @@ currentSection: reference
 currentItem: StatusValues
 pageflow_prev_url: TemporaryRedirectStatus.html
 pageflow_prev_text: TemporaryRedirectStatus class
-pageflow_next_url: MovedPermanentlyStatus.html
-pageflow_next_text: MovedPermanentlyStatus class
+pageflow_next_url: BadRequestStatus.html
+pageflow_next_text: BadRequestStatus class
 ---
 
 # PermanentRedirectStatus
