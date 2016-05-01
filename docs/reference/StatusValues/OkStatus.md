@@ -163,3 +163,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
+* [`OkStatusProvider`](../StatusProviders/OkStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

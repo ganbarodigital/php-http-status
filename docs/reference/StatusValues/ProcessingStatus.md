@@ -165,3 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`InformationalStatus`](InformationalStatus.html) - interface implemented by this class
+* [`ProcessingStatusProvider`](../StatusProviders/ProcessingStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
