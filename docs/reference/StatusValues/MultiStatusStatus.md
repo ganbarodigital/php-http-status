@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: ResetContentStatus.html
-pageflow_prev_text: ResetContentStatus class
-pageflow_next_url: MultiStatusStatus.html
-pageflow_next_text: MultiStatusStatus class
+pageflow_prev_url: PartialContentStatus.html
+pageflow_prev_text: PartialContentStatus class
+pageflow_next_url: CreatedStatus.html
+pageflow_next_text: CreatedStatus class
 ---
 
-# PartialContentStatus
+# MultiStatusStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`PartialContentStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 206 Partial Content status.
+`MultiStatusStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 207 Multi-Status status.
 
 ## Public Interface
 
-`PartialContentStatus` has the following public interface:
+`MultiStatusStatus` has the following public interface:
 
 ```php
-// PartialContentStatus lives in this namespace
+// MultiStatusStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class PartialContentStatus
+class MultiStatusStatus
   extends HttpStatus
   implements SuccessfulStatus
 {
@@ -67,55 +67,55 @@ class PartialContentStatus
 
 ### Construction
 
-The constructor for `PartialContentStatus` takes no parameters.
+The constructor for `MultiStatusStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
 
-$httpStatus = new PartialContentStatus;
+$httpStatus = new MultiStatusStatus;
 ```
 
 ### getStatusCode()
 
-`PartialContentStatus::getStatusCode()` returns the HTTP status code as an integer:
+`MultiStatusStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
 
-$httpStatus = new PartialContentStatus;
+$httpStatus = new MultiStatusStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '206' as an integer
+// $statusCode contains the value '207' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`PartialContentStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`MultiStatusStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
 
-$httpStatus = new PartialContentStatus;
+$httpStatus = new MultiStatusStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Partial Content' as a string
+// $reasonPhrase contains the value 'Multi-Status' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're Successful, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`PartialContentStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`MultiStatusStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
 
-$httpStatus = new PartialContentStatus;
+$httpStatus = new MultiStatusStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "206 Partial Content" as a string
+// $statusLine contains the value "207 Multi-Status" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Successful\PartialContentStatus
+    GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus
      [x] Can instantiate
      [x] Is successful status
-     [x] Has status code 206
+     [x] Has status code 207
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -165,4 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
-* [`PartialContentStatusProvider`](../StatusProviders/PartialContentStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
+* [`MultiStatusStatusProvider`](../StatusProviders/MultiStatusStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
