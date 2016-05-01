@@ -45,21 +45,43 @@ menu:
 
     usage:
         text: Usage
-        relativeUrl: usage.html
+        relativeUrl: usage/index.html
 
         items:
             usage:
                 text: Usage
-                relativeUrl: usage.html
+                relativeUrl: usage/index.html
 
-            httpStatus:
-                text: HttpStatus
-                relativeUrl: HttpStatus.html
 
-            httpStatusValues:
-                text: HTTP Status Value Classes
-                relativeUrl: httpStatusValues.html
+            httpStatusValueObjects:
+                text: HTTP Status Value Objects
+                relativeUrl: usage/http-status-value-objects.html
 
             httpStatusProviders:
                 text: HTTP Status Provider Traits
-                relativeUrl: httpStatusProviders.html
+                relativeUrl: usage/http-status-provider-traits.html
+
+            httpExceptions:
+                text: HTTP Exceptions
+                relativeUrl: usage/http-exceptions.html
+
+    reference:
+        text: Reference
+        relativeUrl: reference/index.html
+
+        items:
+            home:
+                text: Reference
+                relativeUrl: reference/index.html
+
+            HttpExceptions:
+                text: HTTP Exceptions
+                relativeUrl: reference/HttpExceptions/index.html
+
+            StatusProviders:
+                text: HTTP Status Providers
+                relativeUrl: reference/StatusProviders/index.html
+
+            StatusValues:
+                text: HTTP Status Values
+                relativeUrl: reference/StatusValues/index.html
