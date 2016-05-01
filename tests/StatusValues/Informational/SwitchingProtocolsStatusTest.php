@@ -96,7 +96,7 @@ class SwitchingProtocolsStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode101()
     {
         // ----------------------------------------------------------------
         // setup your test
