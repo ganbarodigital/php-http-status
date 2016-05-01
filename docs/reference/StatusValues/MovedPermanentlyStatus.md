@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: IMUsedStatus.html
-pageflow_prev_text: IMUsedStatus class
-pageflow_next_url: MovedPermanentlyStatus.html
-pageflow_next_text: MovedPermanentlyStatus class
+pageflow_prev_url: MultipleChoicesStatus.html
+pageflow_prev_text: MultipleChoicesStatus class
+pageflow_next_url: FoundStatus.html
+pageflow_next_text: FoundStatus class
 ---
 
-# MultipleChoicesStatus
+# MovedPermanentlyStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`MultipleChoicesStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 300 Multiple Choices status.
+`MovedPermanentlyStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 301 Moved Permanently status.
 
 ## Public Interface
 
-`MultipleChoicesStatus` has the following public interface:
+`MovedPermanentlyStatus` has the following public interface:
 
 ```php
-// MultipleChoicesStatus lives in this namespace
+// MovedPermanentlyStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Redirection;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\RedirectionStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class MultipleChoicesStatus
+class MovedPermanentlyStatus
   extends HttpStatus
   implements RedirectionStatus
 {
@@ -67,55 +67,55 @@ class MultipleChoicesStatus
 
 ### Construction
 
-The constructor for `MultipleChoicesStatus` takes no parameters.
+The constructor for `MovedPermanentlyStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus;
 
-$httpStatus = new MultipleChoicesStatus;
+$httpStatus = new MovedPermanentlyStatus;
 ```
 
 ### getStatusCode()
 
-`MultipleChoicesStatus::getStatusCode()` returns the HTTP status code as an integer:
+`MovedPermanentlyStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus;
 
-$httpStatus = new MultipleChoicesStatus;
+$httpStatus = new MovedPermanentlyStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '300' as an integer
+// $statusCode contains the value '301' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`MultipleChoicesStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`MovedPermanentlyStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus;
 
-$httpStatus = new MultipleChoicesStatus;
+$httpStatus = new MovedPermanentlyStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Multiple Choices' as a string
+// $reasonPhrase contains the value 'Moved Permanently' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're Redirection, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`MultipleChoicesStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`MovedPermanentlyStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus;
 
-$httpStatus = new MultipleChoicesStatus;
+$httpStatus = new MovedPermanentlyStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "300 Multiple Choices" as a string
+// $statusLine contains the value "301 Moved Permanently" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Redirection\MultipleChoicesStatus
+    GanbaroDigital\HttpStatus\StatusValues\Redirection\MovedPermanentlyStatus
      [x] Can instantiate
      [x] Is Redirection status
-     [x] Has status code 300
+     [x] Has status code 301
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -165,4 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`RedirectionStatus`](RedirectionStatus.html) - interface implemented by this class
-* [`MultipleChoicesStatusProvider`](../StatusProviders/MultipleChoicesStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
+* [`MovedPermanentlyStatusProvider`](../StatusProviders/MovedPermanentlyStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
