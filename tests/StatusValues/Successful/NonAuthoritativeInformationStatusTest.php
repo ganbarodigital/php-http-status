@@ -96,7 +96,7 @@ class NonAuthoritativeInformationStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode203()
     {
         // ----------------------------------------------------------------
         // setup your test
