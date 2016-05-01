@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: PartialContentStatus.html
-pageflow_prev_text: PartialContentStatus class
-pageflow_next_url: AlreadyReportedStatus.html
-pageflow_next_text: AlreadyReportedStatus class
+pageflow_prev_url: MultiStatusStatus.html
+pageflow_prev_text: MultiStatusStatus class
+pageflow_next_url: CreatedStatus.html
+pageflow_next_text: CreatedStatus class
 ---
 
-# MultiStatusStatus
+# AlreadyReportedStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,21 +15,21 @@ Since v1.0.0
 
 ## Description
 
-`MultiStatusStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 207 Multi-Status status.
+`AlreadyReportedStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 208 Already Reported status.
 
 ## Public Interface
 
-`MultiStatusStatus` has the following public interface:
+`AlreadyReportedStatus` has the following public interface:
 
 ```php
-// MultiStatusStatus lives in this namespace
+// AlreadyReportedStatus lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
 use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class MultiStatusStatus
+class AlreadyReportedStatus
   extends HttpStatus
   implements SuccessfulStatus
 {
@@ -67,55 +67,55 @@ class MultiStatusStatus
 
 ### Construction
 
-The constructor for `MultiStatusStatus` takes no parameters.
+The constructor for `AlreadyReportedStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus;
 
-$httpStatus = new MultiStatusStatus;
+$httpStatus = new AlreadyReportedStatus;
 ```
 
 ### getStatusCode()
 
-`MultiStatusStatus::getStatusCode()` returns the HTTP status code as an integer:
+`AlreadyReportedStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus;
 
-$httpStatus = new MultiStatusStatus;
+$httpStatus = new AlreadyReportedStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '207' as an integer
+// $statusCode contains the value '208' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`MultiStatusStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`AlreadyReportedStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus;
 
-$httpStatus = new MultiStatusStatus;
+$httpStatus = new AlreadyReportedStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Multi-Status' as a string
+// $reasonPhrase contains the value 'Already Reported' as a string
 ```
 
 HTTP reason phrases are part of the HTTP standards. They're Successful, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`MultiStatusStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`AlreadyReportedStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus;
 
-$httpStatus = new MultiStatusStatus;
+$httpStatus = new AlreadyReportedStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "207 Multi-Status" as a string
+// $statusLine contains the value "208 Already Reported" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +125,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\Successful\MultiStatusStatus
+    GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus
      [x] Can instantiate
      [x] Is successful status
-     [x] Has status code 207
+     [x] Has status code 208
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -165,4 +165,4 @@ None at this time.
 
 * [`HttpStatus`](HttpStatus.html) - base class
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
-* [`MultiStatusStatusProvider`](../StatusProviders/MultiStatusStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
+* [`AlreadyReportedStatusProvider`](../StatusProviders/AlreadyReportedStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status
