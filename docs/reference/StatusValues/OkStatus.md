@@ -1,13 +1,11 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: SwitchingProtocolsStatus.html
-pageflow_prev_text: SwitchingProtocolsStatus class
-pageflow_next_url: OkStatus.html
-pageflow_next_text: OkStatus class
+pageflow_prev_url: ProcessingStatus.html
+pageflow_prev_text: ProcessingStatus class
 ---
 
-# ProcessingStatus
+# OkStatus
 
 <div class="callout info">
 Since v1.0.0
@@ -15,23 +13,23 @@ Since v1.0.0
 
 ## Description
 
-`ProcessingStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 102 Processing status.
+`OkStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 200 OK status.
 
 ## Public Interface
 
-`ProcessingStatus` has the following public interface:
+`OkStatus` has the following public interface:
 
 ```php
-// ProcessingStatus lives in this namespace
-namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
+// OkStatus lives in this namespace
+namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
 use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
 
-class ProcessingStatus
+class OkStatus
   extends HttpStatus
-  implements InformationalStatus
+  implements SuccessfulStatus
 {
     /**
      * our constructor
@@ -67,55 +65,55 @@ class ProcessingStatus
 
 ### Construction
 
-The constructor for `ProcessingStatus` takes no parameters.
+The constructor for `OkStatus` takes no parameters.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus;
 
-$httpStatus = new ProcessingStatus;
+$httpStatus = new OkStatus;
 ```
 
 ### getStatusCode()
 
-`ProcessingStatus::getStatusCode()` returns the HTTP status code as an integer:
+`OkStatus::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus;
 
-$httpStatus = new ProcessingStatus;
+$httpStatus = new OkStatus;
 $statusCode = $httpStatus->getStatusCode();
 
-// $statusCode contains the value '102' as an integer
+// $statusCode contains the value '200' as an integer
 ```
 
 HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.
 
 ### getReasonPhrase()
 
-`ProcessingStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`OkStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus;
 
-$httpStatus = new ProcessingStatus;
+$httpStatus = new OkStatus;
 $reasonPhrase = $httpStatus->getReasonPhrase();
 
-// $reasonPhrase contains the value 'Processing' as a string
+// $reasonPhrase contains the value 'OK' as a string
 ```
 
-HTTP reason phrases are part of the HTTP standards. They're informational, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
+HTTP reason phrases are part of the HTTP standards. They're Successful, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.
 
 ### getStatusLine()
 
-`ProcessingStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`OkStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus;
+use GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus;
 
-$httpStatus = new ProcessingStatus;
+$httpStatus = new OkStatus;
 $statusLine = $httpStatus->getStatusLine();
 
-// $statusLine contains the value "102 Processing" as a string
+// $statusLine contains the value "200 OK" as a string
 
 // use $statusLine to set the response from your PHP app
 header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
@@ -125,10 +123,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigitalTest\HttpStatus\StatusValues\Informational\ProcessingStatus
+    GanbaroDigital\HttpStatus\StatusValues\Successful\OkStatus
      [x] Can instantiate
-     [x] Is informational status
-     [x] Has status code 102
+     [x] Is successful status
+     [x] Has status code 200
      [x] Has correct reason phrase
      [x] Has correct status line
 
@@ -164,4 +162,4 @@ None at this time.
 # See Also
 
 * [`HttpStatus`](HttpStatus.html) - base class
-* [`InformationalStatus`](InformationalStatus.html) - interface implemented by this class
+* [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
