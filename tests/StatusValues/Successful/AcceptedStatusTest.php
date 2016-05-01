@@ -96,7 +96,7 @@ class AcceptedStatusTest extends PHPUnit_Framework_TestCase
      * @covers ::__construct
      * @covers ::getStatusCode
      */
-    public function testHasStatusCode100()
+    public function testHasStatusCode202()
     {
         // ----------------------------------------------------------------
         // setup your test
