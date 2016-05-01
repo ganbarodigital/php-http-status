@@ -7,24 +7,30 @@ pageflow_next_url: ContinueStatus.html
 pageflow_next_text: ContinueStatus class
 ---
 
-# The HttpStatus Value Object
+# The HttpStatusObject Value Object
 
 <div class="callout info">
-Since v1.0.0
+Since v2.0.0
 </div>
 
 ## Description
 
-`HttpStatus` is a value object. It represents a single HTTP status.
+`HttpStatusObject` is a value object. It represents a single HTTP status.
+
+All of the [HTTP Status Value objects](index.html) are instances of `HttpStatusObject`.
 
 ## Public Interface
 
-`HttpStatus` has the following public interface:
+`HttpStatusObject` has the following public interface:
 
 ```php
+// HttpStatusObject lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusValues;
 
-class HttpStatus
+// our base classes and interfaces
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+
+class HttpStatusObject implements HttpStatus
 {
     /**
      * constructs a new HttpStatus value object
@@ -61,13 +67,11 @@ class HttpStatus
 }
 ```
 
-All of the [HTTP Status Value objects](index.html) are instances of `HttpStatus`.
-
 ## How To Use
 
 ### Construction
 
-The constructor for `HttpStatus` takes two parameters:
+The constructor for `HttpStatusObject` takes two parameters:
 
 * `$statusCode` (int) - the HTTP status code (e.g. 404)
 * `$reasonPhrase` (string) - a description of the HTTP status (e.g. "Not Found")
@@ -76,12 +80,12 @@ You can find a full list of HTTP status codes, and their normal descriptions, in
 
 ### getStatusCode()
 
-`HttpStatus::getStatusCode()` returns the HTTP status code as an integer:
+`HttpStatusObject::getStatusCode()` returns the HTTP status code as an integer:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
-$status = new HttpStatus(404, "Not Found");
+$status = new HttpStatusObject(404, "Not Found");
 $statusCode = $status->getStatusCode();
 
 // $statusCode contains the value '400' as an integer
@@ -91,12 +95,12 @@ HTTP status codes are part of the HTTP standards. Servers, proxies and clients u
 
 ### getReasonPhrase()
 
-`HttpStatus::getReasonPhrase()` returns the HTTP reason phrase as a string:
+`HttpStatusObject::getReasonPhrase()` returns the HTTP reason phrase as a string:
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
-$status = new HttpStatus(404, "Not Found");
+$status = new HttpStatusObject(404, "Not Found");
 $reasonPhrase = $status->getReasonPhrase();
 
 // $reasonPhrase contains the value 'Not Found' as a string
@@ -106,12 +110,12 @@ HTTP reason phrases are part of the HTTP standards. They're informational, and a
 
 ### getStatusLine()
 
-`HttpStatus::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
+`HttpStatusObject::getStatusLine()` returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.
 
 ```php
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
-$status = new HttpStatus(404, "Not Found");
+$status = new HttpStatusObject(404, "Not Found");
 $statusLine = $status->getStatusLine();
 
 // $statusLine contains the value "404 Not Found" as a string
@@ -124,8 +128,9 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusValues\HttpStatus
+    GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject
      [x] Can instantiate
+     [x] Is http status
      [x] Can get http status code
      [x] Can get http reason phrase
      [x] Can get http status line

@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,9 +43,10 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\RequestError;
 
-use GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 use GanbaroDigital\HttpStatus\StatusValues\RequestError\PaymentRequiredStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 use PHPUnit_Framework_TestCase;
 
@@ -76,7 +77,7 @@ class PaymentRequiredStatusTest extends PHPUnit_Framework_TestCase
     /**
      * @coversNothing
      */
-    public function testIsRequestErrorStatus()
+    public function testIsHttpStatus()
     {
         // ----------------------------------------------------------------
         // setup your test
@@ -89,7 +90,26 @@ class PaymentRequiredStatusTest extends PHPUnit_Framework_TestCase
         // ----------------------------------------------------------------
         // test the results
 
-        $this->assertInstanceOf(RequestErrorStatus::class, $unit);
+        $this->assertInstanceOf(HttpStatus::class, $unit);
+    }
+
+    /**
+     * @coversNothing
+     */
+    public function testIsHttpRequestErrorStatus()
+    {
+        // ----------------------------------------------------------------
+        // setup your test
+
+        // ----------------------------------------------------------------
+        // perform the change
+
+        $unit = new PaymentRequiredStatus;
+
+        // ----------------------------------------------------------------
+        // test the results
+
+        $this->assertInstanceOf(HttpRequestErrorStatus::class, $unit);
     }
 
     /**

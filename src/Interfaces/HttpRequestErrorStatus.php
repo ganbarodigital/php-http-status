@@ -44,9 +44,9 @@
 namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * InformationalStatus is implemented by any HttpStatus that has a HTTP
- * status code of 1xx.
+ * HttpRequestErrorStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 4xx.
  */
-interface InformationalStatus
+interface HttpRequestErrorStatus extends HttpStatus
 {
 }

@@ -44,9 +44,9 @@
 namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * SuccessfulStatus is implemented by any HttpStatus that has a HTTP
- * status code of 2xx.
+ * HttpRuntimeErrorStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 5xx.
  */
-interface SuccessfulStatus
+interface HttpRuntimeErrorStatus extends HttpStatus
 {
 }

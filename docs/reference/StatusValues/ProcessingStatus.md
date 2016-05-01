@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`ProcessingStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 102 Processing status.
+`ProcessingStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 102 Processing status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class ProcessingStatus
-  extends HttpStatus
-  implements InformationalStatus
+  extends HttpStatusObject
+  implements HttpStatus, HttpInformationalStatus
 {
     /**
      * our constructor
@@ -125,9 +126,10 @@ header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);
 
 Here is the contract for this class:
 
-    GanbaroDigitalTest\HttpStatus\StatusValues\Informational\ProcessingStatus
+    GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus
      [x] Can instantiate
-     [x] Is informational status
+     [x] Is http status
+     [x] Is http informational status
      [x] Has status code 102
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
-* [`InformationalStatus`](InformationalStatus.html) - interface implemented by this class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
+* [`HttpInformationalStatus`](../Interfaces/HttpInformationalStatus.html) - interface implemented by this class
 * [`ProcessingStatusProvider`](../StatusProviders/ProcessingStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,13 +43,14 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues;
 
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 use PHPUnit_Framework_TestCase;
 
 /**
- * @coversDefaultClass GanbaroDigital\HttpStatus\StatusValues\HttpStatus
+ * @coversDefaultClass GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject
  */
-class HttpStatusTest extends PHPUnit_Framework_TestCase
+class HttpStatusObjectTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @covers ::__construct
@@ -65,7 +66,29 @@ class HttpStatusTest extends PHPUnit_Framework_TestCase
         // ----------------------------------------------------------------
         // perform the change
 
-        $unit = new HttpStatus($expectedCode, $expectedReason);
+        $unit = new HttpStatusObject($expectedCode, $expectedReason);
+
+        // ----------------------------------------------------------------
+        // test the results
+
+        $this->assertInstanceOf(HttpStatusObject::class, $unit);
+    }
+
+    /**
+     * @covers ::__construct
+     */
+    public function testIsHttpStatus()
+    {
+        // ----------------------------------------------------------------
+        // setup your test
+
+        $expectedCode = 100;
+        $expectedReason = "Continue";
+
+        // ----------------------------------------------------------------
+        // perform the change
+
+        $unit = new HttpStatusObject($expectedCode, $expectedReason);
 
         // ----------------------------------------------------------------
         // test the results
@@ -84,7 +107,7 @@ class HttpStatusTest extends PHPUnit_Framework_TestCase
         $expectedCode = 100;
         $expectedReason = "Continue";
 
-        $unit = new HttpStatus($expectedCode, $expectedReason);
+        $unit = new HttpStatusObject($expectedCode, $expectedReason);
 
         // ----------------------------------------------------------------
         // perform the change
@@ -108,7 +131,7 @@ class HttpStatusTest extends PHPUnit_Framework_TestCase
         $expectedCode = 100;
         $expectedReason = "Continue";
 
-        $unit = new HttpStatus($expectedCode, $expectedReason);
+        $unit = new HttpStatusObject($expectedCode, $expectedReason);
 
         // ----------------------------------------------------------------
         // perform the change
@@ -133,7 +156,7 @@ class HttpStatusTest extends PHPUnit_Framework_TestCase
         $expectedReason = "Continue";
         $expectedLine = $expectedCode . ' ' . $expectedReason;
 
-        $unit = new HttpStatus($expectedCode, $expectedReason);
+        $unit = new HttpStatusObject($expectedCode, $expectedReason);
 
         // ----------------------------------------------------------------
         // perform the change

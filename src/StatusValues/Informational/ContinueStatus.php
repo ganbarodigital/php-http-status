@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,14 +43,14 @@
 
 namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
 
-use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 /**
- * ContinueStatus is a HttpStatus value object that represents
+ * ContinueStatus is a HttpStatusObject value object that represents
  * the HTTP status code 100: Continue;
  */
-class ContinueStatus extends HttpStatus implements InformationalStatus
+class ContinueStatus extends HttpStatusObject implements HttpInformationalStatus
 {
     /**
      * our constructor

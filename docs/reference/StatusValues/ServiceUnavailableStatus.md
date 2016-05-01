@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`ServiceUnavailableStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 503 Service Unavailable status.
+`ServiceUnavailableStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 503 Service Unavailable status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\RuntimeError;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\RuntimeErrorStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class ServiceUnavailableStatus
   extends HttpStatus
-  implements RuntimeErrorStatus
+  implements HttpStatus, HttpRuntimeErrorStatus
 {
     /**
      * our constructor
@@ -127,7 +128,8 @@ Here is the contract for this class:
 
     GanbaroDigital\HttpStatus\StatusValues\RuntimeError\ServiceUnavailableStatus
      [x] Can instantiate
-     [x] Is RuntimeError status
+     [x] Is http status
+     [x] Is http runtime error status
      [x] Has status code 503
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
-* [`RuntimeErrorStatus`](RuntimeErrorStatus.html) - interface implemented by this class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
+* [`HttpRuntimeErrorStatus`](../Interfaces/HttpRuntimeErrorStatus.html) - interface implemented by this class
 * [`ServiceUnavailableStatusProvider`](../StatusProviders/ServiceUnavailableStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

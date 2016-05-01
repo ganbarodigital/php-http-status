@@ -17,10 +17,14 @@ pageflow_prev_text: HTTP Status Provider Traits
   - Added `HttpRedirectionException`
   - Added `HttpRequestErrorException`
   - Added `HttpRuntimeErrorException`
-
-### B/C Break
-
-The `Specifications` namespace has been renamed to `Interfaces`, to avoid any future confusion with the Specification pattern that is common in Domain-Driven Design. No-one else is using this package atm (according to Packagist), which is the only reason I'm not bumping this up to v2.0.
+* The `Specifications` namespace has been renamed to `Interfaces`, to avoid any future confusion with the Specification pattern that is common in Domain-Driven Design.
+* `HttpStatus` is now an interface; `HttpStatusObject` is now the implementation.
+  - Added `HttpStatus` interface
+  - `InformationalStatus` is now `HttpInformationalStatus`, extends `HttpStatus`
+  - `SuccessfulStatus` is now `HttpSuccessfulStatus`, extends `HttpStatus`
+  - `RedirectionStatus` is now `HttpRedirectionStatus`, extends `HttpStatus`
+  - `RequestErrorStatus` is now `HttpRequestErrorStatus`, extends `HttpStatus`
+  - `RuntimeErrorStatus` is now `HttpRuntimeErrorStatus`, extends `HttpStatus`
 
 ## v1.0.1 - Mon April 19th 2016
 

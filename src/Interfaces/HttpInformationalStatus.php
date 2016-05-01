@@ -34,75 +34,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatus/Interfaces
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatus\StatusValues;
+namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * This is the value object returned by our various HTTP status traits.
+ * HttpInformationalStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 1xx.
  */
-class HttpStatus
+interface HttpInformationalStatus extends HttpStatus
 {
-    /**
-     * the HTTP status code
-     * @var int
-     */
-    private $code;
-
-    /**
-     * the Reason-Phase (to use the RFC7231 term)
-     * @var string
-     */
-    private $reasonPhrase;
-
-    /**
-     * constructs a new HttpStatus value object
-     *
-     * @param int $code
-     *        the HTTP status code to use
-     * @param string $reasonPhrase
-     *        the HTTP reason-phrase to use
-     */
-    public function __construct($code, $reasonPhrase)
-    {
-        $this->code = $code;
-        $this->reasonPhrase = $reasonPhrase;
-    }
-
-    /**
-     * returns the HTTP status code
-     *
-     * @return int
-     */
-    public function getStatusCode()
-    {
-        return $this->code;
-    }
-
-    /**
-     * returns the HTTP status reason-phrase
-     *
-     * @return string
-     */
-    public function getReasonPhrase()
-    {
-        return $this->reasonPhrase;
-    }
-
-    /**
-     * returns the HTTP status line
-     *
-     * this is code + ' ' + reason-phrase
-     *
-     * @return string
-     */
-    public function getStatusLine()
-    {
-        return $this->code . ' ' . $this->reasonPhrase;
-    }
 }

@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`NoContentStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 204 No Content status.
+`NoContentStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 204 No Content status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class NoContentStatus
   extends HttpStatus
-  implements SuccessfulStatus
+  implements HttpStatus, HttpSuccessfulStatus
 {
     /**
      * our constructor
@@ -127,7 +128,8 @@ Here is the contract for this class:
 
     GanbaroDigital\HttpStatus\StatusValues\Successful\NoContentStatus
      [x] Can instantiate
-     [x] Is successful status
+     [x] Is http status
+     [x] Is http successful status
      [x] Has status code 204
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
 * [`SuccessfulStatus`](SuccessfulStatus.html) - interface implemented by this class
 * [`NoContentStatusProvider`](../StatusProviders/NoContentStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

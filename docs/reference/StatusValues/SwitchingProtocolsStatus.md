@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`SwitchingProtocolsStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 101 Switching Protocols status.
+`SwitchingProtocolsStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 101 Switching Protocols status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\Informational;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\InformationalStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class SwitchingProtocolsStatus
-  extends HttpStatus
-  implements InformationalStatus
+  extends HttpStatusObject
+  implements HttpStatus, HttpInformationalStatus
 {
     /**
      * our constructor
@@ -127,7 +128,8 @@ Here is the contract for this class:
 
     GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus
      [x] Can instantiate
-     [x] Is informational status
+     [x] Is http status
+     [x] Is http informational status
      [x] Has status code 101
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
-* [`InformationalStatus`](InformationalStatus.html) - interface implemented by this class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
+* [`HttpInformationalStatus`](../Interfaces/HttpInformationalStatus.html) - interface implemented by this class
 * [`SwitchingProtocolsStatusProvider`](../StatusProviders/SwitchingProtocolsStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

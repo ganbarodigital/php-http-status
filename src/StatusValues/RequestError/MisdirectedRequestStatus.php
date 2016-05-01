@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,14 +43,14 @@
 
 namespace GanbaroDigital\HttpStatus\StatusValues\RequestError;
 
-use GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 /**
- * MisdirectedRequestStatus is a HttpStatus value object that represents
+ * MisdirectedRequestStatus is a HttpStatusObject value object that represents
  * the HTTP status code 421: Misdirected Request
  */
-class MisdirectedRequestStatus extends HttpStatus implements RequestErrorStatus
+class MisdirectedRequestStatus extends HttpStatusObject implements HttpRequestErrorStatus
 {
     /**
      * our constructor

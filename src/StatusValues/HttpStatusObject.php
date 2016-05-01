@@ -34,19 +34,77 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/Interfaces
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @link      http://ganbarodigital.github.io/php-http-status
  */
 
-namespace GanbaroDigital\HttpStatus\Interfaces;
+namespace GanbaroDigital\HttpStatus\StatusValues;
+
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 
 /**
- * RuntimeErrorStatus is implemented by any HttpStatus that has a HTTP
- * status code of 5xx.
+ * This is the value object returned by our various HTTP status traits.
  */
-interface RuntimeErrorStatus
+class HttpStatusObject implements HttpStatus
 {
+    /**
+     * the HTTP status code
+     * @var int
+     */
+    private $code;
+
+    /**
+     * the Reason-Phase (to use the RFC7231 term)
+     * @var string
+     */
+    private $reasonPhrase;
+
+    /**
+     * constructs a new HttpStatusObject value object
+     *
+     * @param int $code
+     *        the HTTP status code to use
+     * @param string $reasonPhrase
+     *        the HTTP reason-phrase to use
+     */
+    public function __construct($code, $reasonPhrase)
+    {
+        $this->code = $code;
+        $this->reasonPhrase = $reasonPhrase;
+    }
+
+    /**
+     * returns the HTTP status code
+     *
+     * @return int
+     */
+    public function getStatusCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * returns the HTTP status reason-phrase
+     *
+     * @return string
+     */
+    public function getReasonPhrase()
+    {
+        return $this->reasonPhrase;
+    }
+
+    /**
+     * returns the HTTP status line
+     *
+     * this is code + ' ' + reason-phrase
+     *
+     * @return string
+     */
+    public function getStatusLine()
+    {
+        return $this->code . ' ' . $this->reasonPhrase;
+    }
 }

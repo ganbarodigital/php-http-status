@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`PermanentRedirectStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 308 Permanent Redirect status.
+`PermanentRedirectStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 308 Permanent Redirect status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\Redirection;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\RedirectionStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class PermanentRedirectStatus
   extends HttpStatus
-  implements RedirectionStatus
+  implements HttpStatus, HttpRedirectionStatus
 {
     /**
      * our constructor
@@ -127,7 +128,8 @@ Here is the contract for this class:
 
     GanbaroDigital\HttpStatus\StatusValues\Redirection\PermanentRedirectStatus
      [x] Can instantiate
-     [x] Is Redirection status
+     [x] Is http status
+     [x] Is http redirection status
      [x] Has status code 308
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
-* [`RedirectionStatus`](RedirectionStatus.html) - interface implemented by this class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
+* [`HttpRedirectionStatus`](../Interfaces/HttpRedirectionStatus.html) - interface implemented by this class
 * [`PermanentRedirectStatusProvider`](../StatusProviders/PermanentRedirectStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

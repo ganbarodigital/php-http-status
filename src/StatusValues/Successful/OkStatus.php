@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,14 +43,14 @@
 
 namespace GanbaroDigital\HttpStatus\StatusValues\Successful;
 
-use GanbaroDigital\HttpStatus\Interfaces\SuccessfulStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 /**
- * OkStatus is a HttpStatus value object that represents
+ * OkStatus is a HttpStatusObject value object that represents
  * the HTTP status code 200: OK;
  */
-class OkStatus extends HttpStatus implements SuccessfulStatus
+class OkStatus extends HttpStatusObject implements HttpSuccessfulStatus
 {
     /**
      * our constructor

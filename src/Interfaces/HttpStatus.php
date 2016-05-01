@@ -44,9 +44,31 @@
 namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * RequestErrorStatus is implemented by any HttpStatus that has a HTTP
- * status code of 4xx.
+ * InformationalStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 1xx.
  */
-interface RequestErrorStatus
+interface HttpStatus
 {
+    /**
+     * returns the HTTP status code
+     *
+     * @return int
+     */
+    public function getStatusCode();
+
+    /**
+     * returns the HTTP status reason-phrase
+     *
+     * @return string
+     */
+    public function getReasonPhrase();
+
+    /**
+     * returns the HTTP status line
+     *
+     * this is code + ' ' + reason-phrase
+     *
+     * @return string
+     */
+    public function getStatusLine();
 }

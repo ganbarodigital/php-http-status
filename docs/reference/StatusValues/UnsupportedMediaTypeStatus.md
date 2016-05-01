@@ -15,7 +15,7 @@ Since v1.0.0
 
 ## Description
 
-`UnsupportedMediaTypeStatus` is a [`HttpStatus`](HttpStatus.html) value object. It represents the HTTP 415 Unsupported Media Type status.
+`UnsupportedMediaTypeStatus` is a [`HttpStatus`](../Interfaces/HttpStatus.html) value object. It represents the HTTP 415 Unsupported Media Type status.
 
 ## Public Interface
 
@@ -26,12 +26,13 @@ Since v1.0.0
 namespace GanbaroDigital\HttpStatus\StatusValues\RequestError;
 
 // our base classes and interfaces
-use GanbaroDigital\HttpStatus\Interfaces\RequestErrorStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 class UnsupportedMediaTypeStatus
   extends HttpStatus
-  implements RequestErrorStatus
+  implements HttpStatus, HttpRequestErrorStatus
 {
     /**
      * our constructor
@@ -127,7 +128,8 @@ Here is the contract for this class:
 
     GanbaroDigital\HttpStatus\StatusValues\RequestError\UnsupportedMediaTypeStatus
      [x] Can instantiate
-     [x] Is RequestError status
+     [x] Is http status
+     [x] Is http request error status
      [x] Has status code 415
      [x] Has correct reason phrase
      [x] Has correct status line
@@ -163,6 +165,6 @@ None at this time.
 
 # See Also
 
-* [`HttpStatus`](HttpStatus.html) - base class
-* [`RequestErrorStatus`](RequestErrorStatus.html) - interface implemented by this class
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - interface for all status value objects
+* [`HttpRequestErrorStatus`](../Interfaces/HttpRequestErrorStatus.html) - interface implemented by this class
 * [`UnsupportedMediaTypeStatusProvider`](../StatusProviders/UnsupportedMediaTypeStatusProvider.html) - trait to map your value object, entity or exception onto this HTTP status

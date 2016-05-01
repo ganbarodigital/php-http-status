@@ -44,9 +44,9 @@
 namespace GanbaroDigital\HttpStatus\Interfaces;
 
 /**
- * RedirectionStatus is implemented by any HttpStatus that has a HTTP
- * status code of 3xx.
+ * SuccessfulStatus is implemented by any HttpStatus that has a HTTP
+ * status code of 2xx.
  */
-interface RedirectionStatus
+interface HttpSuccessfulStatus extends HttpStatus
 {
 }
