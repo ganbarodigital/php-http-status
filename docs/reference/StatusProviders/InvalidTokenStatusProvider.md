@@ -1,13 +1,13 @@
 ---
 currentSection: reference
 currentItem: StatusProviders
-pageflow_prev_url: RequestHeaderFieldsTooLargeStatusProvider.html
-pageflow_prev_text: RequestHeaderFieldsTooLargeStatusProvider trait
-pageflow_next_url: InvalidTokenStatusProvider.html
-pageflow_next_text: InvalidTokenStatusProvider trait
+pageflow_prev_url: UnavailableForLegalReasonsStatusProvider.html
+pageflow_prev_text: UnavailableForLegalReasonsStatusProvider trait
+pageflow_next_url: InternalServerErrorStatusProvider.html
+pageflow_next_text: InternalServerErrorStatusProvider trait
 ---
 
-# UnavailableForLegalReasonsStatusProvider
+# InvalidTokenStatusProvider
 
 <div class="callout info">
 Since v1.0.0
@@ -15,27 +15,27 @@ Since v1.0.0
 
 ## Description
 
-`UnavailableForLegalReasonsStatusProvider` is a trait. It adds a `getHttpStatus()` method to your entity, value object or exception. This method returns a [`HttpStatus`](../Interfaces/HttpStatus.html) value object that represents the status [HTTP 451 Unavailable For Legal Reasons](../StatusValues/UnavailableForLegalReasonsStatus.html).
+`InvalidTokenStatusProvider` is a trait. It adds a `getHttpStatus()` method to your entity, value object or exception. This method returns a [`HttpStatus`](../Interfaces/HttpStatus.html) value object that represents the status [HTTP 498 Invalid Token](../StatusValues/InvalidTokenStatus.html).
 
-`UnavailableForLegalReasonsStatusProvider` satisfies the [`HttpStatusProvider`](../Interfaces/HttpStatusProvider.html) and [`HttpException`](../Interfaces/HttpException) interfaces.
+`InvalidTokenStatusProvider` satisfies the [`HttpStatusProvider`](../Interfaces/HttpStatusProvider.html) and [`HttpException`](../Interfaces/HttpException) interfaces.
 
 ## Public Interface
 
-`UnavailableForLegalReasonsStatusProvider` has the following public interface:
+`InvalidTokenStatusProvider` has the following public interface:
 
 ```php
-// UnavailableForLegalReasonsStatusProvider lives in this namespace
+// InvalidTokenStatusProvider lives in this namespace
 namespace GanbaroDigital\HttpStatus\StatusProviders\RequestError;
 
 // our return types
-use GanbaroDigital\HttpStatus\StatusValues\RequestError\UnavailableForLegalReasonsStatus;
+use GanbaroDigital\HttpStatus\StatusValues\RequestError\InvalidTokenStatus;
 
-trait UnavailableForLegalReasonsStatusProvider
+trait InvalidTokenStatusProvider
 {
     /**
      * returns the HTTP status code that best represents this object
      *
-     * @return UnavailableForLegalReasonsStatus
+     * @return InvalidTokenStatus
      */
     public function getHttpStatus();
 }
@@ -45,16 +45,16 @@ trait UnavailableForLegalReasonsStatusProvider
 
 ### In Value Objects and Entities
 
-Use this trait in any value object or entity that maps onto the HTTP 451 status.
+Use this trait in any value object or entity that maps onto the HTTP 498 status.
 
 ```php
 use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
-use GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnavailableForLegalReasonsStatusProvider;
+use GanbaroDigital\HttpStatus\StatusProviders\RequestError\InvalidTokenStatusProvider;
 
 class MyValueObject implements HttpStatusProvider
 {
     // adds getHttpStatus()
-    use UnavailableForLegalReasonsStatusProvider;
+    use InvalidTokenStatusProvider;
 }
 ```
 
@@ -62,16 +62,16 @@ PHP does not let traits implement interfaces. Your value object or entity will n
 
 ### In Exceptions
 
-Use this trait in any exception that maps onto the HTTP 451 status.
+Use this trait in any exception that maps onto the HTTP 498 status.
 
 ```php
 use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorException;
-use GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnavailableForLegalReasonsStatusProvider;
+use GanbaroDigital\HttpStatus\StatusProviders\RequestError\InvalidTokenStatusProvider;
 
 class MyException implements HttpRequestErrorException
 {
     // adds getHttpStatus()
-    use UnavailableForLegalReasonsStatusProvider;
+    use InvalidTokenStatusProvider;
 }
 ```
 
@@ -81,9 +81,9 @@ PHP does not let traits implement interfaces. Your value object or entity will n
 
 Here is the contract for this class:
 
-    GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnavailableForLegalReasonsStatusProvider
+    GanbaroDigital\HttpStatus\StatusProviders\RequestError\InvalidTokenStatusProvider
      [x] Can instantiate class that uses this trait
-     [x] Returns unavailable for legal reasons status
+     [x] Returns invalid token status
 
 Class contracts are built from this class's unit tests.
 
@@ -112,10 +112,10 @@ If you:
 
 ## Notes
 
-* `UnavailableForLegalReasonsStatusProvider` returns a new instance of `UnavailableForLegalReasonsStatus` each time you call `getHttpStatus()`.
+* `InvalidTokenStatusProvider` returns a new instance of `InvalidTokenStatus` each time you call `getHttpStatus()`.
 
 ## See Also
 
-* [`UnavailableForLegalReasonsStatus`](../StatusValues/UnavailableForLegalReasonsStatus.html) - the HTTP status value object returned by this trait
+* [`InvalidTokenStatus`](../StatusValues/InvalidTokenStatus.html) - the HTTP status value object returned by this trait
 * [`HttpStatusProvider`](../Interfaces/HttpStatusProvider.html) - interface that your value object or entity should implement
 * [`HttpRequestErrorException`](../Interfaces/HttpRequestErrorException.html) - interface that your exception should implement

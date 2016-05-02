@@ -110,6 +110,7 @@ HTTP Status Code | Value Object's Class
 429 | [`GanbaroDigital\HttpStatus\StatusProviders\RequestError\TooManyRequestsStatusProvider`](TooManyRequestsStatusProvider.html)
 431 | [`GanbaroDigital\HttpStatus\StatusProviders\RequestError\RequestHeaderFieldsTooLargeStatusProvider`](RequestHeaderFieldsTooLargeStatusProvider.html)
 451 | [`GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnavailableForLegalReasonsStatusProvider`](UnavailableForLegalReasonsStatusProvider.html)
+498 | [`GanbaroDigital\HttpStatus\StatusProviders\RequestError\InvalidTokenStatusProvider`](InvalidTokenStatusProvider.html)
 
 ## RuntimeError Status Codes
 

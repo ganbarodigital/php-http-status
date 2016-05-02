@@ -107,6 +107,7 @@ HTTP Status Code | Value Object's Class
 429 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\TooManyRequestsStatus`](TooManyRequestsStatus.html)
 431 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestHeaderFieldsTooLargeStatus`](RequestHeaderFieldsTooLargeStatus.html)
 451 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\UnavailableForLegalReasonsStatus`](UnavailableForLegalReasonsStatus.html)
+498 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\InvalidTokenStatus`](InvalidTokenStatus.html)
 
 Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus`](../Interfaces/HttpRequestErrorStatus.html) interface.
 

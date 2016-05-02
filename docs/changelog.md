@@ -25,6 +25,9 @@ pageflow_prev_text: HTTP Status Provider Traits
   - `RedirectionStatus` is now `HttpRedirectionStatus`, extends `HttpStatus`
   - `RequestErrorStatus` is now `HttpRequestErrorStatus`, extends `HttpStatus`
   - `RuntimeErrorStatus` is now `HttpRuntimeErrorStatus`, extends `HttpStatus`
+* Added support for HTTP 498 Invalid Token
+  - Added `InvalidTokenStatus` value object
+  - Added `InvalidTokenStatusProvider` trait
 
 ## v1.0.1 - Mon April 19th 2016
 

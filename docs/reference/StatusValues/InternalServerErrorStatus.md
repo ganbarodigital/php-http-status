@@ -1,8 +1,8 @@
 ---
 currentSection: reference
 currentItem: StatusValues
-pageflow_prev_url: UnavailableForLegalReasonsStatus.html
-pageflow_prev_text: UnavailableForLegalReasonsStatus class
+pageflow_prev_url: InvalidTokenStatus.html
+pageflow_prev_text: InvalidTokenStatus class
 pageflow_next_url: UnexpectedErrorStatus.html
 pageflow_next_text: UnexpectedErrorStatus class
 ---
