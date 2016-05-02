@@ -1,6 +1,8 @@
 ---
 currentSection: reference
 currentItem: StatusProviders
+pageflow_next_url: ContinueStatusProvider.html
+pageflow_next_text: ContinueStatusProvider trait
 ---
 
 # HTTP Status Provider Traits
