@@ -9,8 +9,8 @@ pageflow_next_text: HttpSuccessfulStatus interface
 
 # HttpInformationalStatus
 
-<div class="callout warning">
-Not yet in a tagged release
+<div class="callout info">
+Since v2.0.0
 </div>
 
 ## Description

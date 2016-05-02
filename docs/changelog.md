@@ -10,6 +10,10 @@ pageflow_next_text: Usage
 
 ## develop branch
 
+Nothing yet.
+
+## v2.0.0 - Mon 2nd May 2016
+
 ### New
 
 * Improve readability of exceptions that map onto a HTTP status code. Also make it possible to catch classes of exceptions at a time.
