@@ -74,9 +74,9 @@ menu:
                 text: Reference
                 relativeUrl: reference/index.html
 
-            HttpExceptions:
-                text: HTTP Exceptions
-                relativeUrl: reference/HttpExceptions/index.html
+            Interfaces:
+                text: Interfaces
+                relativeUrl: reference/Interfaces/index.html
 
             StatusProviders:
                 text: HTTP Status Providers
