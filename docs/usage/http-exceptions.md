@@ -15,11 +15,11 @@ There's a `HttpException` interface for each class of HTTP Status code.
 
 HTTP Status Code | Exception Interface
 -----------------|--------------------
-1xx | `GanbaroDigital\HttpStatus\Interfaces\HttpInformationalException`
-2xx | `GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatusException`
-3xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionException`
-4xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorException`
-5xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorException`
+1xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpInformationalException`](../reference/Interfaces/HHttpInformationalException.html)
+2xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatusException`](../reference/HttpSuccessfulStatusException.html)
+3xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionException`](../reference/HttpRedirectionException.html)
+4xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorException`](../reference/HttpRequestErrorException.html)
+5xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorException`](../reference/HttpRuntimeErrorException.html)
 
 Each of these `HttpException` interfaces:
 

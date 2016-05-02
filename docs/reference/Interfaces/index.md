@@ -1,6 +1,10 @@
 ---
 currentSection: reference
 currentItem: Interfaces
+pageflow_prev_url: ../index.html
+pageflow_prev_text: Reference
+pageflow_next_url: HttpException.html
+pageflow_next_text: HttpException interface
 ---
 
 # Interfaces

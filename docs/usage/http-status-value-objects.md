@@ -38,8 +38,8 @@ They also implement one of the following interfaces, so that you can easily tell
 
 HTTP Status Code | Interface To Test For
 -----------------|----------------------
-1xx | `GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus`
-2xx | `GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus`
-3xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRedirectStatus`
-4xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus`
-5xx | `GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus`
+1xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus`](../reference/Interfaces/HHttpInformationalStatus.html)
+2xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus`](../reference/Interfaces/HttpSuccessfulStatus.html)
+3xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRedirectStatus`](../reference/Interfaces/HttpRedirectStatus.html)
+4xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus`](../reference/Interfaces/HttpRequestErrorException.html)
+5xx | [`GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus`](../reference/Interfaces/HttpRuntimeErrorStatus.html)
