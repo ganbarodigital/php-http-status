@@ -25,7 +25,7 @@ Since v1.0.0
 
 ```php
 // FoundStatusProvider lives in this namespace
-namespace GanbaroDigital\HttpStatus\StatusProviders\Informational;
+namespace GanbaroDigital\HttpStatus\StatusProviders\Redirection;
 
 // our return types
 use GanbaroDigital\HttpStatus\StatusValues\Redirection\FoundStatus;
@@ -65,17 +65,17 @@ PHP does not let traits implement interfaces. Your value object or entity will n
 Use this trait in any exception that maps onto the HTTP 302 status.
 
 ```php
-use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalException;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionException;
 use GanbaroDigital\HttpStatus\StatusProviders\Redirection\FoundStatusProvider;
 
-class MyException implements HttpInformationalException
+class MyException implements HttpRedirectionException
 {
     // adds getHttpStatus()
     use FoundStatusProvider;
 }
 ```
 
-PHP does not let traits implement interfaces. Your value object or entity will need to implement the `HttpInformationalException` interface explicitly.
+PHP does not let traits implement interfaces. Your value object or entity will need to implement the `HttpRedirectionException` interface explicitly.
 
 ## Class Contract
 
