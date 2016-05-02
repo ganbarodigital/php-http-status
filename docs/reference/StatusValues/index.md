@@ -35,7 +35,7 @@ HTTP Status Code | Value Object's Class
 101 | [`GanbaroDigital\HttpStatus\StatusValues\Informational\SwitchingProtocolsStatus`](SwitchingProtocolsStatus.html)
 102 | [`GanbaroDigital\HttpStatus\StatusValues\Informational\ProcessingStatus`](ProcessingStatus.html)
 
-Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus`](HttpInformationalStatus.html) interface.
+Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus`](../Interfaces/HttpInformationalStatus.html) interface.
 
 ## Successful Status Codes
 
@@ -54,7 +54,7 @@ HTTP Status Code | Value Object's Class
 208 | [`GanbaroDigital\HttpStatus\StatusValues\Successful\AlreadyReportedStatus`](AlreadyReportedStatus.html)
 226 | [`GanbaroDigital\HttpStatus\StatusValues\Successful\IMUsedStatus`](IMUsedStatus.html)
 
-Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus`](HttpSuccessfulStatus.html) interface.
+Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus`](../Interfaces/HttpSuccessfulStatus.html) interface.
 
 ## Redirection Status Codes
 
@@ -71,7 +71,7 @@ HTTP Status Code | Value Object's Class
 307 | [`GanbaroDigital\HttpStatus\StatusValues\Redirection\TemporaryRedirectStatus`](TemporaryRedirectStatus.html)
 308 | [`GanbaroDigital\HttpStatus\StatusValues\Redirection\PermanentRedirectStatus`](PermanentRedirectStatus.html)
 
-Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionStatus`](HttpRedirectionStatus.html) interface.
+Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRedirectionStatus`](../Interfaces/HttpRedirectionStatus.html) interface.
 
 ## RequestError Status Codes
 
@@ -108,7 +108,7 @@ HTTP Status Code | Value Object's Class
 431 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\RequestHeaderFieldsTooLargeStatus`](RequestHeaderFieldsTooLargeStatus.html)
 451 | [`GanbaroDigital\HttpStatus\StatusValues\RequestError\UnavailableForLegalReasonsStatus`](UnavailableForLegalReasonsStatus.html)
 
-Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus`](HttpRequestErrorStatus) interface.
+Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus`](../Interfaces/HttpRequestErrorStatus.html) interface.
 
 ## RuntimeError Status Codes
 
@@ -129,4 +129,4 @@ HTTP Status Code | Value Object's Class
 510 | [`GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotExtendedStatus`](NotExtendedStatus.html)
 511 | [`GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NetworkAuthenticationRequiredStatus`](NetworkAuthenticationRequiredStatus.html)
 
-Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus`](HttpRuntimeErrorStatus.html) interface.
+Each of these classes implements the [`GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus`](../Interfaces/HttpRuntimeErrorStatus.html) interface.

@@ -166,4 +166,5 @@ None at this time.
 
 # See Also
 
+* [`HttpStatus`](../Interfaces/HttpStatus.html) - our base interface
 * [Full list of HTTP status value objects](index.html)
