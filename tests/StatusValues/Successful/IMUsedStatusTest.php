@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,9 +43,10 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\Successful;
 
-use GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 use GanbaroDigital\HttpStatus\StatusValues\Successful\IMUsedStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 use PHPUnit_Framework_TestCase;
 
@@ -76,7 +77,7 @@ class IMUsedStatusTest extends PHPUnit_Framework_TestCase
     /**
      * @coversNothing
      */
-    public function testIsSuccessfulStatus()
+    public function testIsHttpStatus()
     {
         // ----------------------------------------------------------------
         // setup your test
@@ -89,7 +90,26 @@ class IMUsedStatusTest extends PHPUnit_Framework_TestCase
         // ----------------------------------------------------------------
         // test the results
 
-        $this->assertInstanceOf(SuccessfulStatus::class, $unit);
+        $this->assertInstanceOf(HttpStatus::class, $unit);
+    }
+
+    /**
+     * @coversNothing
+     */
+    public function testIsHttpSuccessfulStatus()
+    {
+        // ----------------------------------------------------------------
+        // setup your test
+
+        // ----------------------------------------------------------------
+        // perform the change
+
+        $unit = new IMUsedStatus;
+
+        // ----------------------------------------------------------------
+        // test the results
+
+        $this->assertInstanceOf(HttpSuccessfulStatus::class, $unit);
     }
 
     /**

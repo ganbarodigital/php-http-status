@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\Successful;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\Successful\NonAuthoritativeInformationStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\Successful\NonAuthoritativeInformationStatus;
 use PHPUnit_Framework_TestCase;

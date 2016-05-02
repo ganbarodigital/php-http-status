@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,14 +43,14 @@
 
 namespace GanbaroDigital\HttpStatus\StatusValues\RequestError;
 
-use GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 /**
- * ImATeapotStatus is a HttpStatus value object that represents
+ * ImATeapotStatus is a HttpStatusObject value object that represents
  * the HTTP status code 418: I'm A Teapot
  */
-class ImATeapotStatus extends HttpStatus implements RequestErrorStatus
+class ImATeapotStatus extends HttpStatusObject implements HttpRequestErrorStatus
 {
     /**
      * our constructor

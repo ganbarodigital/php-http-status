@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\Redirection;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\Redirection\FoundStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\Redirection\FoundStatus;
 use PHPUnit_Framework_TestCase;

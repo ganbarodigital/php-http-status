@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,9 +43,10 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\Informational;
 
-use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 use PHPUnit_Framework_TestCase;
 
@@ -76,7 +77,7 @@ class ContinueStatusTest extends PHPUnit_Framework_TestCase
     /**
      * @coversNothing
      */
-    public function testIsInformationalStatus()
+    public function testIsHttpStatus()
     {
         // ----------------------------------------------------------------
         // setup your test
@@ -89,7 +90,26 @@ class ContinueStatusTest extends PHPUnit_Framework_TestCase
         // ----------------------------------------------------------------
         // test the results
 
-        $this->assertInstanceOf(InformationalStatus::class, $unit);
+        $this->assertInstanceOf(HttpStatus::class, $unit);
+    }
+
+    /**
+     * @coversNothing
+     */
+    public function testIsHttpInformationalStatus()
+    {
+        // ----------------------------------------------------------------
+        // setup your test
+
+        // ----------------------------------------------------------------
+        // perform the change
+
+        $unit = new ContinueStatus;
+
+        // ----------------------------------------------------------------
+        // test the results
+
+        $this->assertInstanceOf(HttpInformationalStatus::class, $unit);
     }
 
     /**

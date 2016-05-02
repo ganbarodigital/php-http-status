@@ -1,12 +1,39 @@
 ---
 currentSection: overview
 currentItem: changelog
-pageflow_prev_url: httpStatusProviders.html
-pageflow_prev_text: HTTP Status Provider Traits
+pageflow_prev_url: installation.html
+pageflow_prev_text: Installation
+pageflow_next_url: usage/index.html
+pageflow_next_text: Usage
 ---
 # CHANGELOG
 
 ## develop branch
+
+Nothing yet.
+
+## v2.0.0 - Mon 2nd May 2016
+
+### New
+
+* Improve readability of exceptions that map onto a HTTP status code. Also make it possible to catch classes of exceptions at a time.
+  - Added `HttpException`
+  - Added `HttpInformationalException`
+  - Added `HttpSuccessfulStatusException`
+  - Added `HttpRedirectionException`
+  - Added `HttpRequestErrorException`
+  - Added `HttpRuntimeErrorException`
+* The `Specifications` namespace has been renamed to `Interfaces`, to avoid any future confusion with the Specification pattern that is common in Domain-Driven Design.
+* `HttpStatus` is now an interface; `HttpStatusObject` is now the implementation.
+  - Added `HttpStatus` interface
+  - `InformationalStatus` is now `HttpInformationalStatus`, extends `HttpStatus`
+  - `SuccessfulStatus` is now `HttpSuccessfulStatus`, extends `HttpStatus`
+  - `RedirectionStatus` is now `HttpRedirectionStatus`, extends `HttpStatus`
+  - `RequestErrorStatus` is now `HttpRequestErrorStatus`, extends `HttpStatus`
+  - `RuntimeErrorStatus` is now `HttpRuntimeErrorStatus`, extends `HttpStatus`
+* Added support for HTTP 498 Invalid Token
+  - Added `InvalidTokenStatus` value object
+  - Added `InvalidTokenStatusProvider` trait
 
 ## v1.0.1 - Mon April 19th 2016
 

@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\RuntimeError;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\RuntimeError\InsufficientStorageStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\InsufficientStorageStatus;
 use PHPUnit_Framework_TestCase;

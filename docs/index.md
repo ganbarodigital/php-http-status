@@ -13,7 +13,8 @@ Ganbaro Digital's _HTTP Status Library_ is an easy-to-use way to add HTTP status
 
 * Ships with a prebuilt collection of HTTP status code value objects.
 * Use traits to add instant HTTP status code values to your value objects, entities and exceptions.
-* Implement the `HttpStatusProvider` interface to show that your value objects, entities and exceptions can provide a HTTP status code.
+* Implement the [`HttpStatusProvider`](reference/Interfaces/HttpStatusProvider.html) interface to show that your value objects and entities can provide a HTTP status code.
+* Implement one of the [`HttpException`](reference/Interfaces/index.html) interfaces to show that your exception can provide a HTTP status code.
 
 ## Goals
 

@@ -43,7 +43,7 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusProviders\RuntimeError;
 
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
 use GanbaroDigital\HttpStatus\StatusProviders\RuntimeError\NotImplementedStatusProvider;
 use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotImplementedStatus;
 use PHPUnit_Framework_TestCase;

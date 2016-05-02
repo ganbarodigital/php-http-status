@@ -34,7 +34,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @category  Libraries
- * @package   HttpStatus/StatusValues
+ * @package   HttpStatusObject/StatusValues
  * @author    Stuart Herbert <stuherbert@ganbarodigital.com>
  * @copyright 2016-present Ganbaro Digital Ltd www.ganbarodigital.com
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
@@ -43,9 +43,10 @@
 
 namespace GanbaroDigitalTest\HttpStatus\StatusValues\RuntimeError;
 
-use GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\NotImplementedStatus;
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
 
 use PHPUnit_Framework_TestCase;
 
@@ -76,7 +77,7 @@ class NotImplementedStatusTest extends PHPUnit_Framework_TestCase
     /**
      * @coversNothing
      */
-    public function testIsRuntimeErrorStatus()
+    public function testIsHttpStatus()
     {
         // ----------------------------------------------------------------
         // setup your test
@@ -89,7 +90,26 @@ class NotImplementedStatusTest extends PHPUnit_Framework_TestCase
         // ----------------------------------------------------------------
         // test the results
 
-        $this->assertInstanceOf(RuntimeErrorStatus::class, $unit);
+        $this->assertInstanceOf(HttpStatus::class, $unit);
+    }
+
+    /**
+     * @coversNothing
+     */
+    public function testIsHttpRuntimeErrorStatus()
+    {
+        // ----------------------------------------------------------------
+        // setup your test
+
+        // ----------------------------------------------------------------
+        // perform the change
+
+        $unit = new NotImplementedStatus;
+
+        // ----------------------------------------------------------------
+        // test the results
+
+        $this->assertInstanceOf(HttpRuntimeErrorStatus::class, $unit);
     }
 
     /**
