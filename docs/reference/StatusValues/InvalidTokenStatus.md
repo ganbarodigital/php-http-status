@@ -10,7 +10,7 @@ pageflow_next_text: InternalServerErrorStatus class
 # InvalidTokenStatus
 
 <div class="callout info">
-Since v1.0.0
+Since v2.0.0
 </div>
 
 ## Description
