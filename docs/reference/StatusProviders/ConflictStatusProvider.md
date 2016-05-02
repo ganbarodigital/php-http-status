@@ -62,7 +62,7 @@ PHP does not let traits implement interfaces. Your value object or entity will n
 
 ### In Exceptions
 
-Use this trait in any exception that maps onto the HTTP 400 status.
+Use this trait in any exception that maps onto the HTTP 409 status.
 
 ```php
 use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorException;
