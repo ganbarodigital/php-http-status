@@ -43,7 +43,7 @@
 
 namespace GanbaroDigital\HttpStatus\Interfaces;
 
-use GanbaroDigital\HttpStatus\StatusValues\HttpStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
 
 /**
  * HttpStatusProvider is implemented by any entity, value class or exception that
