@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="assets/html5shiv.js"></script>
+            <script src="assets/html5printshiv.js"></script>
+        <![endif]-->
+        <meta charset="utf-8"/>
+        <title>HTTP Status Library for PHP from Ganbaro Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://ganbarodigital.github.io/php-http-status/assets/docs.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/assets/prism.css">
+        <script src="http://ganbarodigital.github.io/php-http-status/assets/prism.js"></script>
+    </head>
+    <body data-ishi-anchors="1">
+        <header role="banner">
+            <div>
+                <p style="font-size: 34px; padding-top: 10px">HTTP Status Library for PHP</p>
+                <p style="font-size: 18px; border-bottom: 1px solid; padding-bottom: 10px">Add HTTP Status Codes To Your Code</p>
+            </div>
+            <!--<a href="http://ganbarodigital.github.io/php-http-status/index.html">
+                <img src="http://ganbarodigital.github.io/php-http-status/assets/ganbarodigital.svg" width="60" height="60" style="vertical-align: middle; float: left; margin-right: 15px">
+            </a>-->
+            <nav class="navbar topbar">
+                <ul>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
+                        </li>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
+                        </li>
+                                            <li class="current">
+                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                        </li>
+                                    </ul>
+            </nav>
+        </header>
+                                                                                                <header role="subnav">
+                        <nav class="navbar">
+                            <ul>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/Interfaces/index.html">Interfaces</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/StatusProviders/index.html">HTTP Status Providers</a>
+                                    </li>
+                                                                    <li class="current">
+                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/StatusValues/index.html">HTTP Status Values</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </header>
+                                            <main role="main">
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="ServiceUnavailableStatus.html">Prev: ServiceUnavailableStatus class</a></li>
+                                                      <li><a href="HttpVersionNotSupportedStatus.html">Next: HttpVersionNotSupportedStatus class</a></li>
+                                </ul>
+            </nav>
+            
+            <article>
+                <h1 id="gatewaytimeoutstatus">GatewayTimeoutStatus</h1>
+<div class="callout info">
+Since v1.0.0
+</div>
+<h2 id="description">Description</h2>
+<p><code>GatewayTimeoutStatus</code> is a <a href="../Interfaces/HttpStatus.html"><code>HttpStatus</code></a> value object. It represents the HTTP 504 Gateway Timeout status.</p>
+<h2 id="public-interface">Public Interface</h2>
+<p><code>GatewayTimeoutStatus</code> has the following public interface:</p>
+<pre><code class="language-php">// GatewayTimeoutStatus lives in this namespace
+namespace GanbaroDigital\HttpStatus\StatusValues\RuntimeError;
+
+// our base classes and interfaces
+use GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
+
+class GatewayTimeoutStatus
+  extends HttpStatus
+  implements HttpStatus, HttpRuntimeErrorStatus
+{
+    /**
+     * our constructor
+     */
+    public function __construct();
+
+    /**
+     * returns the HTTP status code
+     *
+     * @return int
+     */
+    public function getStatusCode();
+
+    /**
+     * returns the HTTP status reason-phrase
+     *
+     * @return string
+     */
+    public function getReasonPhrase();
+
+    /**
+     * returns the HTTP status line
+     *
+     * this is code + ' ' + reason-phrase
+     *
+     * @return string
+     */
+    public function getStatusLine();
+}</code></pre>
+<h2 id="how-to-use">How To Use</h2>
+<h3 id="construction">Construction</h3>
+<p>The constructor for <code>GatewayTimeoutStatus</code> takes no parameters.</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus;
+
+$httpStatus = new GatewayTimeoutStatus;</code></pre>
+<h3 id="getstatuscode">getStatusCode()</h3>
+<p><code>GatewayTimeoutStatus::getStatusCode()</code> returns the HTTP status code as an integer:</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus;
+
+$httpStatus = new GatewayTimeoutStatus;
+$statusCode = $httpStatus-&gt;getStatusCode();
+
+// $statusCode contains the value '504' as an integer</code></pre>
+<p>HTTP status codes are part of the HTTP standards. Servers, proxies and clients use these codes to understand what happened with a HTTP request.</p>
+<h3 id="getreasonphrase">getReasonPhrase()</h3>
+<p><code>GatewayTimeoutStatus::getReasonPhrase()</code> returns the HTTP reason phrase as a string:</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus;
+
+$httpStatus = new GatewayTimeoutStatus;
+$reasonPhrase = $httpStatus-&gt;getReasonPhrase();
+
+// $reasonPhrase contains the value 'Gateway Timeout' as a string</code></pre>
+<p>HTTP reason phrases are part of the HTTP standards. They're RuntimeError, and are there for humans to read. Servers, proxies and clients may store, forward and log these reason phrases, but they should never actually parse them or use them to understand what happened with a HTTP request.</p>
+<h3 id="getstatusline">getStatusLine()</h3>
+<p><code>GatewayTimeoutStatus::getStatusLine()</code> returns the HTTP status line. This is the string that is printed after the HTTP protocol version at the start of any HTTP response.</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus;
+
+$httpStatus = new GatewayTimeoutStatus;
+$statusLine = $httpStatus-&gt;getStatusLine();
+
+// $statusLine contains the value "504 Gateway Timeout" as a string
+
+// use $statusLine to set the response from your PHP app
+header($_SERVER["SERVER_PROTOCOL"] ." " . $statusLine);</code></pre>
+<h2 id="class-contract">Class Contract</h2>
+<p>Here is the contract for this class:</p>
+<pre><code>GanbaroDigital\HttpStatus\StatusValues\RuntimeError\GatewayTimeoutStatus
+ [x] Can instantiate
+ [x] Is http status
+ [x] Is http runtime error status
+ [x] Has status code 504
+ [x] Has correct reason phrase
+ [x] Has correct status line</code></pre>
+<p>Class contracts are built from this class's unit tests.</p>
+<div class="callout success">
+Future releases of this class will not break this contract.
+</div>
+<div class="callout info">
+<p>Future releases of this class may add to this contract. New additions may include:</p>
+<ul>
+<li>clarifying existing behaviour (e.g. stricter contract around input or return types)</li>
+<li>add new behaviours (e.g. extra class methods)</li>
+</ul>
+</div>
+<div class="callout warning">
+<p>When you use this class, you can only rely on the behaviours documented by this contract.</p>
+<p>If you:</p>
+<ul>
+<li>find other ways to use this class,</li>
+<li>or depend on behaviours that are not covered by a unit test,</li>
+<li>or depend on undocumented internal states of this class,</li>
+</ul>
+<p>... your code may not work in the future.</p>
+</div>
+<h1 id="notes">Notes</h1>
+<p>None at this time.</p>
+<h1 id="see-also">See Also</h1>
+<ul>
+<li><a href="../Interfaces/HttpStatus.html"><code>HttpStatus</code></a> - interface for all status value objects</li>
+<li><a href="../Interfaces/HttpRuntimeErrorStatus.html"><code>HttpRuntimeErrorStatus</code></a> - interface implemented by this class</li>
+<li><a href="../StatusProviders/GatewayTimeoutStatusProvider.html"><code>GatewayTimeoutStatusProvider</code></a> - trait to map your value object, entity or exception onto this HTTP status</li>
+</ul>
+            </article>
+
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="ServiceUnavailableStatus.html">Prev: ServiceUnavailableStatus class</a></li>
+                                                      <li><a href="HttpVersionNotSupportedStatus.html">Next: HttpVersionNotSupportedStatus class</a></li>
+                                </ul>
+            </nav>
+                    </main>
+
+        <aside class="sidebar">
+            <h2>This Page</h2>
+            <nav class="toc" data-type="ishi-toc" data-max-depth="3">
+            </nav>
+        </aside>
+        <footer>
+            <div class="strapline">
+                <p>Copyright &copy; 2015 <a href="http://ganbarodigital.com">Ganbaro Digital Ltd</a>. Released under the <a href="http://ganbarodigital.github.io/php-http-status/license.html">New BSD</a> license.
+                                            Find HTTP Status Library for PHP on <a href="https://github.com/ganbarodigital/php-http-status">GitHub</a>.
+                                        Built with <a href="http://couscous.io/">Couscous</a>.
+                </p>
+            </div>
+        </footer>
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/laroux.js"></script>
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/ishi.js"></script>
+    </body>
+</html>

@@ -16,7 +16,7 @@
         <header role="banner">
             <div>
                 <p style="font-size: 34px; padding-top: 10px">HTTP Status Library for PHP</p>
-                <p style="font-size: 18px; border-top: 1px solid; padding-top: 10px">Add HTTP Status Codes To Your Code</p>
+                <p style="font-size: 18px; border-bottom: 1px solid; padding-bottom: 10px">Add HTTP Status Codes To Your Code</p>
             </div>
             <!--<a href="http://ganbarodigital.github.io/php-http-status/index.html">
                 <img src="http://ganbarodigital.github.io/php-http-status/assets/ganbarodigital.svg" width="60" height="60" style="vertical-align: middle; float: left; margin-right: 15px">
@@ -27,7 +27,10 @@
                             <a class="" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
                         </li>
                                             <li class="current">
-                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/usage.html">Usage</a>
+                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
+                        </li>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
                         </li>
                                     </ul>
             </nav>
@@ -35,43 +38,37 @@
                                                                             <header role="subnav">
                         <nav class="navbar">
                             <ul>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
+                                    </li>
                                                                     <li class="current">
-                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/usage.html">Usage</a>
+                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/usage/http-status-value-objects.html">HTTP Status Value Objects</a>
                                     </li>
                                                                     <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/HttpStatus.html">HttpStatus</a>
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/http-status-provider-traits.html">HTTP Status Provider Traits</a>
                                     </li>
                                                                     <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/httpStatusValues.html">HTTP Status Value Classes</a>
-                                    </li>
-                                                                    <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/httpStatusProviders.html">HTTP Status Provider Traits</a>
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/http-exceptions.html">HTTP Exceptions</a>
                                     </li>
                                                             </ul>
                         </nav>
                     </header>
-                                            <main role="main">
+                                                                <main role="main">
                         <nav class="pageflow">
               <ul>
-                                    <li><a href="installation.html">Prev: Installation</a></li>
-                                                      <li><a href="HttpStatus.html">Next: HttpStatus</a></li>
+                                    <li><a href="index.html">Prev: Usage</a></li>
+                                                      <li><a href="http-status-provider-traits.html">Next: HTTP Status Provider Traits</a></li>
                                 </ul>
             </nav>
             
             <article>
-                <h1 id="usage">Usage</h1>
-<h2 id="introduction">Introduction</h2>
-<p>You can use the <em>HTTP Status Library</em> in two ways:</p>
-<ul>
-<li>simply instantiate new value objects for known HTTP status codes, and/or</li>
-<li>use the traits in the <code>StatusProviders</code> namespace to add a <code>getHttpStatus()</code> method to your own value objects, entities and exceptions</li>
-</ul>
+                <h1 id="http-status-value-objects">HTTP Status Value Objects</h1>
 <h2 id="using-the-predefined-value-objects">Using The Predefined Value Objects</h2>
-<p>There's a predefined value object for each supported HTTP status code. The full list of objects is here: <a href="httpStatusValues.html">HTTP Status Value Classes</a>.</p>
+<p>There's a predefined value object for each supported HTTP status code. The full list of objects is here: <a href="../reference/StatusValues/index.html">HTTP Status Value Classes</a>.</p>
 <p>You can create new instances of each HTTP status value object, and then use these however you want:</p>
 <pre><code class="language-php">// import the class(es) you need
 use GanbaroDigital\HttpStatus\StatusValues\Informational\ContinueStatus;
-use GanbaroDigital\HttpStatus\Specifications\InformationalStatus;
+use GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus;
 
 // create the value object
 $httpStatus = new ContinueStatus;
@@ -80,8 +77,10 @@ $httpStatus = new ContinueStatus;
 //
 // echos '1'
 echo $httpStatus instanceof ContinueStatus . PHP_EOL;
-echo $httpStatus instanceof InformationalStatus . PHP_EOL;</code></pre>
-<p>Each predefined value object implements one of the following interfaces, so that you can easily tell what type of HTTP status it is:</p>
+echo $httpStatus instanceof HttpInformationalStatus . PHP_EOL;</code></pre>
+<h2 id="http-status-interfaces">HTTP Status Interfaces</h2>
+<p>Each predefined value object implements the <a href="../reference/Interfaces/HttpStatus.html"><code>HttpStatus</code></a> interface.</p>
+<p>They also implement one of the following interfaces, so that you can easily tell what type of HTTP status it is:</p>
 <table>
 <thead>
 <tr>
@@ -92,51 +91,32 @@ echo $httpStatus instanceof InformationalStatus . PHP_EOL;</code></pre>
 <tbody>
 <tr>
 <td>1xx</td>
-<td><code>GanbaroDigital\HttpStatus\Specifications\InformationalStatus</code></td>
+<td><a href="../reference/Interfaces/HHttpInformationalStatus.html"><code>GanbaroDigital\HttpStatus\Interfaces\HttpInformationalStatus</code></a></td>
 </tr>
 <tr>
 <td>2xx</td>
-<td><code>GanbaroDigital\HttpStatus\Specifications\SuccessfulStatus</code></td>
+<td><a href="../reference/Interfaces/HttpSuccessfulStatus.html"><code>GanbaroDigital\HttpStatus\Interfaces\HttpSuccessfulStatus</code></a></td>
 </tr>
 <tr>
 <td>3xx</td>
-<td><code>GanbaroDigital\HttpStatus\Specifications\RedirectStatus</code></td>
+<td><a href="../reference/Interfaces/HttpRedirectStatus.html"><code>GanbaroDigital\HttpStatus\Interfaces\HttpRedirectStatus</code></a></td>
 </tr>
 <tr>
 <td>4xx</td>
-<td><code>GanbaroDigital\HttpStatus\Specifications\RequestErrorStatus</code></td>
+<td><a href="../reference/Interfaces/HttpRequestErrorException.html"><code>GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorStatus</code></a></td>
 </tr>
 <tr>
 <td>5xx</td>
-<td><code>GanbaroDigital\HttpStatus\Specifications\RuntimeErrorStatus</code></td>
+<td><a href="../reference/Interfaces/HttpRuntimeErrorStatus.html"><code>GanbaroDigital\HttpStatus\Interfaces\HttpRuntimeErrorStatus</code></a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="using-the-traits">Using The Traits</h2>
-<p>There's a trait for each supported HTTP status code. The full list of traits is here: <a href="httpStatusProviders.html">HTTP Status Provider Traits</a>.</p>
-<p>Each trait is used exactly the same way:</p>
-<pre><code class="language-php">// import the trait and associated interface
-use GanbaroDigital\HttpStatus\StatusProviders\Informational\ContinueStatusProvider;
-use GanbaroDigital\HttpStatus\Specifications\HttpStatusProvider;
-
-class MyValueObject implements HttpStatusProvider
-{
-    use ContinueStatusProvider;
-}</code></pre>
-<p>Each trait adds a public method <code>getHttpStatus()</code> to your class:</p>
-<pre><code class="language-php">/**
- * returns the HttpStatus that we have mapped onto
- *
- * @return HttpStatus
- */
-public function getHttpStatus();</code></pre>
-<p>The trait that you pick decides which HTTP status that <code>getHttpStatus()</code> will return.</p>
             </article>
 
                         <nav class="pageflow">
               <ul>
-                                    <li><a href="installation.html">Prev: Installation</a></li>
-                                                      <li><a href="HttpStatus.html">Next: HttpStatus</a></li>
+                                    <li><a href="index.html">Prev: Usage</a></li>
+                                                      <li><a href="http-status-provider-traits.html">Next: HTTP Status Provider Traits</a></li>
                                 </ul>
             </nav>
                     </main>

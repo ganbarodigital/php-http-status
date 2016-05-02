@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="assets/html5shiv.js"></script>
+            <script src="assets/html5printshiv.js"></script>
+        <![endif]-->
+        <meta charset="utf-8"/>
+        <title>HTTP Status Library for PHP from Ganbaro Digital</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://ganbarodigital.github.io/php-http-status/assets/docs.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="http://ganbarodigital.github.io/php-http-status/assets/prism.css">
+        <script src="http://ganbarodigital.github.io/php-http-status/assets/prism.js"></script>
+    </head>
+    <body data-ishi-anchors="1">
+        <header role="banner">
+            <div>
+                <p style="font-size: 34px; padding-top: 10px">HTTP Status Library for PHP</p>
+                <p style="font-size: 18px; border-bottom: 1px solid; padding-bottom: 10px">Add HTTP Status Codes To Your Code</p>
+            </div>
+            <!--<a href="http://ganbarodigital.github.io/php-http-status/index.html">
+                <img src="http://ganbarodigital.github.io/php-http-status/assets/ganbarodigital.svg" width="60" height="60" style="vertical-align: middle; float: left; margin-right: 15px">
+            </a>-->
+            <nav class="navbar topbar">
+                <ul>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
+                        </li>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
+                        </li>
+                                            <li class="current">
+                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                        </li>
+                                    </ul>
+            </nav>
+        </header>
+                                                                                                <header role="subnav">
+                        <nav class="navbar">
+                            <ul>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                                    </li>
+                                                                    <li class="current">
+                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/Interfaces/index.html">Interfaces</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/StatusProviders/index.html">HTTP Status Providers</a>
+                                    </li>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/StatusValues/index.html">HTTP Status Values</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </header>
+                                            <main role="main">
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="HttpRuntimeErrorStatus.html">Prev: HttpRuntimeErrorStatus interface</a></li>
+                                                      <li></li>
+                                </ul>
+            </nav>
+            
+            <article>
+                <h1 id="httpstatusprovider">HttpStatusProvider</h1>
+<div class="callout info">
+Since v1.0.0
+</div>
+<h2 id="description">Description</h2>
+<p><code>HttpStatusProvider</code> is an interface. Implement this on any object that can provide a <a href="HttpStatus.html"><code>HttpStatus</code></a> value object.</p>
+<h2 id="public-interface">Public Interface</h2>
+<p><code>HttpStatusProvider</code> provides the following public interface:</p>
+<pre><code class="language-php">// HttpStatusProvider lives in this namespace
+namespace GanbaroDigital\HttpStatus\Interfaces;
+
+// our return types
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+
+/**
+ * HttpStatusProvider is implemented by any entity, value class or exception that
+ * is mapped onto a HTTP status code.
+ *
+ * All of the traits in the `GanbaroDigital\HttpStatus\StatusProviders` namespace
+ * implement this interface. However, PHP does not allow traits to state that
+ * they implement an interface (grrr).
+ *
+ * You need to manually add 'implements HttpStatusProvider' to every one
+ * of your exception classes that uses any of our `StatusProvider` traits.
+ */
+interface HttpStatusProvider
+{
+    /**
+     * returns the HTTP status code that best represents this object
+     *
+     * @return HttpStatus
+     */
+    public function getHttpStatus();
+}</code></pre>
+<h2 id="how-to-use">How To Use</h2>
+<h3 id="with-entities-and-value-objects">With Entities And Value Objects</h3>
+<p>Your entities and value objects can implement <code>HttpStatusProvider</code> directly:</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\StatusValues\HttpStatusObject;
+
+class MyClass implements HttpStatusProvider
+{
+    public function getHttpStatus()
+    {
+        return new HttpStatusObject(498, "Invalid token");
+    }
+}</code></pre>
+<h3 id="with-httpstatusprovider-traits">With HttpStatusProvider Traits</h3>
+<p>A better way is to use the pre-build <a href="../StatusProviders/index.html">status provider traits</a> that come with the <em>HTTP Status Library</em>.</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
+use GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnprocessableEntityStatusProvider;
+
+class MyClass implements HttpStatusProvider
+{
+    // adds getHttpStatus() for you
+    // returns an UnprocessableEntityStatus
+    use UnprocessableEntityStatusProvider;
+}</code></pre>
+<p>There's a trait for each HTTP status value.</p>
+<h3 id="with-httpexceptions">With HttpExceptions</h3>
+<p>If you're creating an exception class, you'll want to use one of the <code>HttpException</code> interfaces instead. There's an interface for each type of HTTP status, which makes it much easier to catch exceptions in your code.</p>
+<pre><code class="language-php">use GanbaroDigital\HttpStatus\Interfaces\HttpRequestErrorException;
+use GanbaroDigital\HttpStatus\StatusProviders\RequestError\UnprocessableEntityStatusProvider;
+use RuntimeException;
+
+class MyException extends RuntimeException implements HttpRequestErrorException
+{
+    // adds getHttpStatus() for you
+    // returns an UnprocessableEntityStatus
+    use UnprocessableEntityStatusProvider;
+}
+
+try {
+    throw new MyException("bad input");
+}
+catch (HttpRequestErrorException $e) {
+    $httpStatus = $e-&gt;getHttpStatus();
+    // ...
+}</code></pre>
+<p>All of the <code>HttpExceptions</code> interfaces extend <code>HttpStatusProvider</code>.</p>
+<h2 id="notes">Notes</h2>
+<p>None at this time.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../usage/http-exceptions.html"><code>HttpExceptions</code></a></li>
+</ul>
+            </article>
+
+                        <nav class="pageflow">
+              <ul>
+                                    <li><a href="HttpRuntimeErrorStatus.html">Prev: HttpRuntimeErrorStatus interface</a></li>
+                                                      <li></li>
+                                </ul>
+            </nav>
+                    </main>
+
+        <aside class="sidebar">
+            <h2>This Page</h2>
+            <nav class="toc" data-type="ishi-toc" data-max-depth="3">
+            </nav>
+        </aside>
+        <footer>
+            <div class="strapline">
+                <p>Copyright &copy; 2015 <a href="http://ganbarodigital.com">Ganbaro Digital Ltd</a>. Released under the <a href="http://ganbarodigital.github.io/php-http-status/license.html">New BSD</a> license.
+                                            Find HTTP Status Library for PHP on <a href="https://github.com/ganbarodigital/php-http-status">GitHub</a>.
+                                        Built with <a href="http://couscous.io/">Couscous</a>.
+                </p>
+            </div>
+        </footer>
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/laroux.js"></script>
+    <script src="http://ganbarodigital.github.io/php-http-status/assets/ishi.js"></script>
+    </body>
+</html>

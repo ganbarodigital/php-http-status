@@ -49,12 +49,14 @@ pre[class*="language-"] {
 }
 
 .token.keyword,
-.token.operator {
+.token.operator,
+.token.scope .token.punctuation {
     color: #e09146;
 }
 
 .token.package,
 .token.package .token.punctuation,
+.token.scope,
 .token.class-name,
 .token.function {
     color: #a7ed65;

@@ -16,7 +16,7 @@
         <header role="banner">
             <div>
                 <p style="font-size: 34px; padding-top: 10px">HTTP Status Library for PHP</p>
-                <p style="font-size: 18px; border-top: 1px solid; padding-top: 10px">Add HTTP Status Codes To Your Code</p>
+                <p style="font-size: 18px; border-bottom: 1px solid; padding-bottom: 10px">Add HTTP Status Codes To Your Code</p>
             </div>
             <!--<a href="http://ganbarodigital.github.io/php-http-status/index.html">
                 <img src="http://ganbarodigital.github.io/php-http-status/assets/ganbarodigital.svg" width="60" height="60" style="vertical-align: middle; float: left; margin-right: 15px">
@@ -27,7 +27,10 @@
                             <a class="current" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
                         </li>
                                             <li class="">
-                            <a class="" href="http://ganbarodigital.github.io/php-http-status/usage.html">Usage</a>
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
+                        </li>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
                         </li>
                                     </ul>
             </nav>
@@ -50,11 +53,11 @@
                                                             </ul>
                         </nav>
                     </header>
-                                                                <main role="main">
+                                                                                    <main role="main">
                         <nav class="pageflow">
               <ul>
-                                    <li><a href="httpStatusProviders.html">Prev: HTTP Status Provider Traits</a></li>
-                                                      <li></li>
+                                    <li><a href="installation.html">Prev: Installation</a></li>
+                                                      <li><a href="usage/index.html">Next: Usage</a></li>
                                 </ul>
             </nav>
             
@@ -62,8 +65,43 @@
                 <h1 id="changelog">CHANGELOG</h1>
 <h2 id="develop-branch">develop branch</h2>
 <p>Nothing yet.</p>
-<h2 id="v100---sun-april-10th-2016">v1.0.0 - Sun April 10th 2016</h2>
+<h2 id="v200---mon-2nd-may-2016">v2.0.0 - Mon 2nd May 2016</h2>
 <h3 id="new">New</h3>
+<ul>
+<li>Improve readability of exceptions that map onto a HTTP status code. Also make it possible to catch classes of exceptions at a time.
+<ul>
+<li>Added <code>HttpException</code></li>
+<li>Added <code>HttpInformationalException</code></li>
+<li>Added <code>HttpSuccessfulStatusException</code></li>
+<li>Added <code>HttpRedirectionException</code></li>
+<li>Added <code>HttpRequestErrorException</code></li>
+<li>Added <code>HttpRuntimeErrorException</code></li>
+</ul></li>
+<li>The <code>Specifications</code> namespace has been renamed to <code>Interfaces</code>, to avoid any future confusion with the Specification pattern that is common in Domain-Driven Design.</li>
+<li><code>HttpStatus</code> is now an interface; <code>HttpStatusObject</code> is now the implementation.
+<ul>
+<li>Added <code>HttpStatus</code> interface</li>
+<li><code>InformationalStatus</code> is now <code>HttpInformationalStatus</code>, extends <code>HttpStatus</code></li>
+<li><code>SuccessfulStatus</code> is now <code>HttpSuccessfulStatus</code>, extends <code>HttpStatus</code></li>
+<li><code>RedirectionStatus</code> is now <code>HttpRedirectionStatus</code>, extends <code>HttpStatus</code></li>
+<li><code>RequestErrorStatus</code> is now <code>HttpRequestErrorStatus</code>, extends <code>HttpStatus</code></li>
+<li><code>RuntimeErrorStatus</code> is now <code>HttpRuntimeErrorStatus</code>, extends <code>HttpStatus</code></li>
+</ul></li>
+<li>Added support for HTTP 498 Invalid Token
+<ul>
+<li>Added <code>InvalidTokenStatus</code> value object</li>
+<li>Added <code>InvalidTokenStatusProvider</code> trait</li>
+</ul></li>
+</ul>
+<h2 id="v101---mon-april-19th-2016">v1.0.1 - Mon April 19th 2016</h2>
+<h3 id="docs">Docs</h3>
+<ul>
+<li>Switched to downloaded template.</li>
+<li>Switched to Stuart's fork of Couscous.</li>
+<li>Made Couscous a dev dependency.</li>
+</ul>
+<h2 id="v100---sun-april-10th-2016">v1.0.0 - Sun April 10th 2016</h2>
+<h3 id="new-1">New</h3>
 <ul>
 <li>Added a value object to represent each support HTTP status code.
 <ul>
@@ -208,8 +246,8 @@
 
                         <nav class="pageflow">
               <ul>
-                                    <li><a href="httpStatusProviders.html">Prev: HTTP Status Provider Traits</a></li>
-                                                      <li></li>
+                                    <li><a href="installation.html">Prev: Installation</a></li>
+                                                      <li><a href="usage/index.html">Next: Usage</a></li>
                                 </ul>
             </nav>
                     </main>

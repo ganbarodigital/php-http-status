@@ -23,68 +23,95 @@
             </a>-->
             <nav class="navbar topbar">
                 <ul>
-                                            <li class="current">
-                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
+                                            <li class="">
+                            <a class="" href="http://ganbarodigital.github.io/php-http-status/index.html">Overview</a>
                         </li>
                                             <li class="">
                             <a class="" href="http://ganbarodigital.github.io/php-http-status/usage/index.html">Usage</a>
                         </li>
-                                            <li class="">
-                            <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                                            <li class="current">
+                            <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
                         </li>
                                     </ul>
             </nav>
         </header>
-                                                        <header role="subnav">
+                                                                                                <header role="subnav">
                         <nav class="navbar">
                             <ul>
+                                                                    <li class="">
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/index.html">Reference</a>
+                                    </li>
                                                                     <li class="current">
-                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/index.html">Introduction</a>
+                                        <a class="current" href="http://ganbarodigital.github.io/php-http-status/reference/Interfaces/index.html">Interfaces</a>
                                     </li>
                                                                     <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/license.html">License</a>
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/StatusProviders/index.html">HTTP Status Providers</a>
                                     </li>
                                                                     <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/installation.html">Installation</a>
-                                    </li>
-                                                                    <li class="">
-                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/changelog.html">Changelog</a>
+                                        <a class="" href="http://ganbarodigital.github.io/php-http-status/reference/StatusValues/index.html">HTTP Status Values</a>
                                     </li>
                                                             </ul>
                         </nav>
                     </header>
-                                                                                    <main role="main">
+                                            <main role="main">
                         <nav class="pageflow">
               <ul>
-                                    <li></li>
-                                                      <li><a href="license.html">Next: License</a></li>
+                                    <li><a href="index.html">Prev: Interfaces</a></li>
+                                                      <li><a href="HttpInformationalException.html">Next: HttpInformationalException interface</a></li>
                                 </ul>
             </nav>
             
             <article>
-                <h1 id="introduction">Introduction</h1>
-<h2 id="what-is-the-http-status-library">What Is The HTTP Status Library?</h2>
-<p>Ganbaro Digital's <em>HTTP Status Library</em> is an easy-to-use way to add HTTP status codes to your value objects, entities, and exceptions.</p>
+                <h1 id="httpexception">HttpException</h1>
+<div class="callout info">
+Since v2.0.0
+</div>
+<h2 id="description">Description</h2>
+<p><code>HttpException</code> is an interface. It is the base interface that all of the <code>HttpExceptions</code> interfaces extend.</p>
+<h2 id="public-interface">Public Interface</h2>
+<p><code>HttpException</code> has the following public interface:</p>
+<pre><code class="language-php">// HttpException lives in this namespace
+namespace GanbaroDigital\HttpStatus\Interfaces;
+
+// our base interfaces
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatusProvider;
+
+// our return types
+use GanbaroDigital\HttpStatus\Interfaces\HttpStatus;
+
+interface HttpException extends HttpStatusProvider
+{
+    /**
+     * returns the HTTP status code that best represents this object
+     *
+     * @return HttpStatus
+     * @inheritedFrom HttpStatusProvider
+     */
+    public function getHttpStatus();
+}</code></pre>
+<h2 id="how-to-use">How To Use</h2>
+<h3 id="catching-exceptions">Catching Exceptions</h3>
+<p>The whole point of <code>HttpException</code> is to make it easier to catch exceptions.</p>
+<pre><code class="language-php">try {
+    // ...
+}
+catch (HttpException $e) {
+    $httpStatus = $e-&gt;getHttpStatus();
+    // ...
+}</code></pre>
+<p>You could catch <code>HttpStatusProvider</code> exceptions instead. We just think that catching <code>HttpException</code> makes your code that little bit more readable.</p>
+<h2 id="notes">Notes</h2>
+<p>None at this time.</p>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li>Ships with a prebuilt collection of HTTP status code value objects.</li>
-<li>Use traits to add instant HTTP status code values to your value objects, entities and exceptions.</li>
-<li>Implement the <a href="reference/Interfaces/HttpStatusProvider.html"><code>HttpStatusProvider</code></a> interface to show that your value objects and entities can provide a HTTP status code.</li>
-<li>Implement one of the <a href="reference/Interfaces/index.html"><code>HttpException</code></a> interfaces to show that your exception can provide a HTTP status code.</li>
+<li><a href="HttpStatusProvider.html"><code>HttpStatusProvider</code></a> - base interface</li>
 </ul>
-<h2 id="goals">Goals</h2>
-<p>This library is guided by these goals:</p>
-<ul>
-<li>Provide a library of known HTTP status codes</li>
-<li>Provide an easy way for value objects, entities and exceptions to map onto HTTP status codes</li>
-</ul>
-<h2 id="questions">Questions?</h2>
-<p>This package was created by <a href="http://www.stuartherbert.com">Stuart Herbert</a> for <a href="https://ganbarodigital.com">Ganbaro Digital Ltd</a>. Follow <a href="https://twitter.com/ganbarodigital">@ganbarodigital</a> or <a href="https://twitter.com/stuherbert">@stuherbert</a> for updates.</p>
             </article>
 
                         <nav class="pageflow">
               <ul>
-                                    <li></li>
-                                                      <li><a href="license.html">Next: License</a></li>
+                                    <li><a href="index.html">Prev: Interfaces</a></li>
+                                                      <li><a href="HttpInformationalException.html">Next: HttpInformationalException interface</a></li>
                                 </ul>
             </nav>
                     </main>
